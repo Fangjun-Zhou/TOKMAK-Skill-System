@@ -7,23 +7,23 @@ using UnityEngine;
 namespace FinTOKMAK.SkillSystem
 {
     /// <summary>
-    /// ¸½¼ÓÔÚÓÎÏ·¶ÔÏóÉÏµÄ¼¼ÄÜ¹ÜÀíÏµÍ³
+    /// é™„åŠ åœ¨æ¸¸æˆå¯¹è±¡ä¸Šçš„æŠ€èƒ½ç®¡ç†ç³»ç»Ÿ
     /// </summary>
     public class SkillLogicManager : MonoBehaviour
     {
         /// <summary>
-        /// ¼¼ÄÜÁĞ±í
+        /// æŠ€èƒ½åˆ—è¡¨
         /// </summary>
         List<SkillLogic> skillList = new List<SkillLogic>();
 
 
         /// <summary>
-        /// ´¥·¢¼¼ÄÜ
+        /// è§¦å‘æŠ€èƒ½
         /// </summary>
-        /// <param name="logic">ÒªÌí¼ÓµÄ¼¼ÄÜÀàĞÍ</param>
+        /// <param name="logic">è¦æ·»åŠ çš„æŠ€èƒ½ç±»å‹</param>
         public void Add(SkillLogic logic)
         {
-            var theSkillLogic = skillList.FirstOrDefault(cus => cus.id == logic.id);//ÄÃµ½µÚÒ»¸öIDÏàÍ¬µÄ¼¼ÄÜ
+            var theSkillLogic = skillList.FirstOrDefault(cus => cus.id == logic.id);//æ‹¿åˆ°ç¬¬ä¸€ä¸ªIDç›¸åŒçš„æŠ€èƒ½
 
             if (theSkillLogic == null)
                 skillList.Add(logic);
@@ -31,19 +31,19 @@ namespace FinTOKMAK.SkillSystem
                 logic = theSkillLogic;
 
 
-            //if (logic.continueStopTime > time)//Í£Ö¹Ê±¼ä´óÓÚµ±Ç°Ê±¼ä£¬ËµÃ÷¼¼ÄÜÃ»Ê§Ğ§
+            //if (logic.continueStopTime > time)//åœæ­¢æ—¶é—´å¤§äºå½“å‰æ—¶é—´ï¼Œè¯´æ˜æŠ€èƒ½æ²¡å¤±æ•ˆ
             //{
 
             //}
-            //else//Í£Ö¹Ê±¼äĞ¡ÓÚµ±Ç°Ê±¼ä£¬ËµÃ÷¼¼ÄÜ¹ıÆÚ£¬Ó¦¸Ã±»ÒÆ³ı
+            //else//åœæ­¢æ—¶é—´å°äºå½“å‰æ—¶é—´ï¼Œè¯´æ˜æŠ€èƒ½è¿‡æœŸï¼Œåº”è¯¥è¢«ç§»é™¤
             //{
 
             //}
 
-            if (logic.continueStopTimeOverlay)//¼¼ÄÜ¸²¸ÇÄ£Ê½
-                logic.continueStopTime = (int)(time + (logic.continueTime * 1000f));//¸²¸Ç
+            if (logic.continueStopTimeOverlay)//æŠ€èƒ½è¦†ç›–æ¨¡å¼
+                logic.continueStopTime = (int)(time + (logic.continueTime * 1000f));//è¦†ç›–
             else
-                logic.continueStopTime += (int)(logic.continueTime * 1000f);//·Ç¸²¸Ç£¬Ê±¼äÀÛ¼ÓÄ£Ê½
+                logic.continueStopTime += (int)(logic.continueTime * 1000f);//éè¦†ç›–ï¼Œæ—¶é—´ç´¯åŠ æ¨¡å¼
 
             logic.continueDeltaTimeNext = time + logic.continueDeltaTime*1000f;
             logic.OnAdd(this, theSkillLogic);
@@ -52,9 +52,9 @@ namespace FinTOKMAK.SkillSystem
         }
 
         /// <summary>
-        /// ÒÆ³ı¼¼ÄÜ
+        /// ç§»é™¤æŠ€èƒ½
         /// </summary>
-        /// <param name="id">¼¼ÄÜID</param>
+        /// <param name="id">æŠ€èƒ½ID</param>
         public void Remove(string id)
         {
             skillList.RemoveAll((x) => {
@@ -69,7 +69,7 @@ namespace FinTOKMAK.SkillSystem
         }
 
         /// <summary>
-        /// ÇåÀíËùÓĞµÄ¼¼ÄÜ
+        /// æ¸…ç†æ‰€æœ‰çš„æŠ€èƒ½
         /// </summary>
         public void Clear()
         {
@@ -78,32 +78,32 @@ namespace FinTOKMAK.SkillSystem
         }
 
         /// <summary>
-        /// »ñÈ¡ÒÑÓĞµÄ¼¼ÄÜ
+        /// è·å–å·²æœ‰çš„æŠ€èƒ½
         /// </summary>
-        /// <param name="id">¼¼ÄÜµÄID</param>
-        /// <returns>·µ»ØÒÑÓĞµÄ¼¼ÄÜ,Èç¹ûÃ»ÓĞ£¬Ôò·µ»ØNull</returns>
+        /// <param name="id">æŠ€èƒ½çš„ID</param>
+        /// <returns>è¿”å›å·²æœ‰çš„æŠ€èƒ½,å¦‚æœæ²¡æœ‰ï¼Œåˆ™è¿”å›Null</returns>
         public SkillLogic Get(string id)
         {
-           return skillList.FirstOrDefault(cus => cus.id == id);//ÄÃµ½µÚÒ»¸öIDÏàÍ¬µÄ¼¼ÄÜ
+           return skillList.FirstOrDefault(cus => cus.id == id);//æ‹¿åˆ°ç¬¬ä¸€ä¸ªIDç›¸åŒçš„æŠ€èƒ½
         }
         private int time;
         public void Update()
         {
             time = (int)(Time.realtimeSinceStartup * 1000f);
             skillList.RemoveAll((x) => {
-                if (x.continueStopTime >= time)//Í£Ö¹Ê±¼ä´óÓÚµ±Ç°Ê±¼ä£¬ËµÃ÷¼¼ÄÜÃ»Ê§Ğ§
+                if (x.continueStopTime >= time)//åœæ­¢æ—¶é—´å¤§äºå½“å‰æ—¶é—´ï¼Œè¯´æ˜æŠ€èƒ½æ²¡å¤±æ•ˆ
                 {
-                    if (x.effectType!=SkillEffectType.ARModel&&x.continueDeltaTimeNext <= time)//¼ì²é¼¼ÄÜÄ£Ê½ºÍ³ÖĞøÖ´ĞĞ¼ä¸ô
+                    if (x.effectType!=SkillEffectType.ARModel&&x.continueDeltaTimeNext <= time)//æ£€æŸ¥æŠ€èƒ½æ¨¡å¼å’ŒæŒç»­æ‰§è¡Œé—´éš”
                     {
                         Debug.Log($"ContinueSkill:{x.id},ContinueDeltaTimeNext:{x.continueDeltaTimeNext},Time:{time}");
                         x.OnContinue();
-                        x.continueDeltaTimeNext += x.continueDeltaTime * 1000f;//¼ÆËãÏÂ´ÎÖ´ĞĞ¼ä¸ô
+                        x.continueDeltaTimeNext += x.continueDeltaTime * 1000f;//è®¡ç®—ä¸‹æ¬¡æ‰§è¡Œé—´éš”
                         Debug.Log($"NewContinueDeltaTimeNext={x.continueDeltaTimeNext}");
                     }
 
                     return false;
                 }
-                else//Í£Ö¹Ê±¼äĞ¡ÓÚµ±Ç°Ê±¼ä£¬ËµÃ÷¼¼ÄÜ¹ıÆÚ£¬Ó¦¸Ã±»ÒÆ³ı
+                else//åœæ­¢æ—¶é—´å°äºå½“å‰æ—¶é—´ï¼Œè¯´æ˜æŠ€èƒ½è¿‡æœŸï¼Œåº”è¯¥è¢«ç§»é™¤
                 {
                     Debug.Log($"RemoveSkill:{x.id},Time:{time}");
                     x.OnRemove(); 

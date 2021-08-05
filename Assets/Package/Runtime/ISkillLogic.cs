@@ -6,53 +6,53 @@ using UnityEngine;
 namespace FinTOKMAK.SkillSystem
 { 
     /// <summary>
-    /// ¼¼ÄÜĞ§¹û½Ó¿Ú
+    /// æŠ€èƒ½æ•ˆæœæ¥å£
     /// </summary>
    
     public class SkillLogic:ScriptableObject
     {
         /// <summary>
-        /// ¼¼ÄÜµÄID
+        /// æŠ€èƒ½çš„ID
         /// </summary>
         [HideInInspector]
         public string id;
         /// <summary>
-        /// ¼¼ÄÜµÄ³ÖĞøÊ±¼ä(Ãë)
+        /// æŠ€èƒ½çš„æŒç»­æ—¶é—´(ç§’)
         /// </summary>
         public float continueTime;
 
         /// <summary>
-        /// ¼¼ÄÜµÄÍ£Ö¹Ê±¼ä
+        /// æŠ€èƒ½çš„åœæ­¢æ—¶é—´
         /// </summary>
         [HideInInspector]
         public float continueStopTime;
 
         /// <summary>
-        /// ¼¼ÄÜĞ§¹ûÀàĞÍ
+        /// æŠ€èƒ½æ•ˆæœç±»å‹
         /// </summary>
         public SkillEffectType effectType;
 
         /// <summary>
-        /// ¼¼ÄÜÍ£Ö¹Ê±¼äÊÇ·ñÊ¹ÓÃ¸²¸ÇÄ£Ê½
+        /// æŠ€èƒ½åœæ­¢æ—¶é—´æ˜¯å¦ä½¿ç”¨è¦†ç›–æ¨¡å¼
         /// </summary>
         public bool continueStopTimeOverlay;
 
         /// <summary>s
-        /// ¼¼ÄÜÔÚ³ÖĞøÄ£Ê½ÏÂµÄÖ´ĞĞ¼ä¸ô(Ãë)
+        /// æŠ€èƒ½åœ¨æŒç»­æ¨¡å¼ä¸‹çš„æ‰§è¡Œé—´éš”(ç§’)
         /// </summary>
         public float continueDeltaTime;
 
         /// <summary>
-        /// ¼¼ÄÜÔÚ³ÖĞøÄ£Ê½ÏÂµÄÏÂÒ»´Î¼ä¸ôÖ´ĞĞÊ±¼ä
+        /// æŠ€èƒ½åœ¨æŒç»­æ¨¡å¼ä¸‹çš„ä¸‹ä¸€æ¬¡é—´éš”æ‰§è¡Œæ—¶é—´
         /// </summary>
         [HideInInspector]
         public float continueDeltaTimeNext;
 
         /// <summary>
-        /// ¼¼ÄÜ±»Ìí¼ÓÊ±Ö´ĞĞµÄ·½·¨
+        /// æŠ€èƒ½è¢«æ·»åŠ æ—¶æ‰§è¡Œçš„æ–¹æ³•
         /// </summary>
-        /// <param name="targer">Ìí¼Ó¼¼ÄÜµÄmanager</param>
-        /// <param name="self">¿ÉÄÜ´æÔÚµÄ¼¼ÄÜ£¬Èç¹û²»´æÔÚÔòÎª¿Õ</param>
+        /// <param name="targer">æ·»åŠ æŠ€èƒ½çš„manager</param>
+        /// <param name="self">å¯èƒ½å­˜åœ¨çš„æŠ€èƒ½ï¼Œå¦‚æœä¸å­˜åœ¨åˆ™ä¸ºç©º</param>
         public virtual void OnAdd(SkillLogicManager targer, SkillLogic self)
         { 
         
@@ -60,7 +60,7 @@ namespace FinTOKMAK.SkillSystem
         }
 
         /// <summary>
-        /// ¼¼ÄÜ±»ÒÆ³ıÊ±Ö´ĞĞµÄ·½·¨
+        /// æŠ€èƒ½è¢«ç§»é™¤æ—¶æ‰§è¡Œçš„æ–¹æ³•
         /// </summary>
         public virtual void OnRemove()
         { 
@@ -69,7 +69,7 @@ namespace FinTOKMAK.SkillSystem
         }
 
         /// <summary>
-        /// ¼¼ÄÜ³ÖĞøÔËĞĞÊ±Ö´ĞĞµÄ·½·¨
+        /// æŠ€èƒ½æŒç»­è¿è¡Œæ—¶æ‰§è¡Œçš„æ–¹æ³•
         /// </summary>
         public virtual void OnContinue()
         { 
@@ -78,20 +78,20 @@ namespace FinTOKMAK.SkillSystem
 
     }
     /// <summary>
-    /// ¼¼ÄÜĞ§¹ûÀàĞÍ
+    /// æŠ€èƒ½æ•ˆæœç±»å‹
     /// </summary>
     public enum SkillEffectType
     { 
         /// <summary>
-        /// Ìí¼Ó¡¢ÒÆ³ıÊ±ÉúĞ§
+        /// æ·»åŠ ã€ç§»é™¤æ—¶ç”Ÿæ•ˆ
         /// </summary>
         ARModel,
         /// <summary>
-        /// ³ÖĞøÉúĞ§
+        /// æŒç»­ç”Ÿæ•ˆ
         /// </summary>
         Continue,
         /// <summary>
-        /// Ìí¼Ó¡¢ÒÆ³ı¡¢³ÖĞøÉúĞ§
+        /// æ·»åŠ ã€ç§»é™¤ã€æŒç»­ç”Ÿæ•ˆ
         /// </summary>
         ARModelAndContinue,
 

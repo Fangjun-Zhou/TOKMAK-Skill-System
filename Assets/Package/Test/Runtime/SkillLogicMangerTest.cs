@@ -52,20 +52,20 @@ public class SkillLogicManagerTest
     }
 
     /// <summary>
-    /// Ö÷¶¯µ÷ÓÃRemove·½·¨À´½áÊø¼¼ÄÜ
+    /// ä¸»åŠ¨è°ƒç”¨Removeæ–¹æ³•æ¥ç»“æŸæŠ€èƒ½
     /// </summary>
     /// <returns></returns>
     [UnityTest]
     public IEnumerator SkillLogic_Manager_Test_Remove()
     {
 
-        //½«¼¼ÄÜ¼ÓÈëskillLogic
+        //å°†æŠ€èƒ½åŠ å…¥skillLogic
         skillLogic.Add(Logic);
-        //¼ì²éÈ·ÈÏ¼¼ÄÜµÄOnRemove·½·¨Î´Ö´ĞĞ
+        //æ£€æŸ¥ç¡®è®¤æŠ€èƒ½çš„OnRemoveæ–¹æ³•æœªæ‰§è¡Œ
         Assert.IsFalse(Logic.RunRemove);
-        //µ÷ÓÃRemove·½·¨ÒÆ³ı¼¼ÄÜ
+        //è°ƒç”¨Removeæ–¹æ³•ç§»é™¤æŠ€èƒ½
         skillLogic.Remove(Logic.id);
-        //¼ì²éÒÆ³ı¼¼ÄÜ´¥·¢µÄOnRemove·½·¨ÊÇ·ñÖ´ĞĞÁË
+        //æ£€æŸ¥ç§»é™¤æŠ€èƒ½è§¦å‘çš„OnRemoveæ–¹æ³•æ˜¯å¦æ‰§è¡Œäº†
         Assert.IsTrue(Logic.RunRemove);
         yield return null;
     }
@@ -73,16 +73,16 @@ public class SkillLogicManagerTest
     [UnityTest]
     public IEnumerator SkillLogic_Manager_Test_AutoRemove()
     {
-        //ÉèÖÃ¼¼ÄÜ³ÖĞøÊ±¼äÎª1Ãë
+        //è®¾ç½®æŠ€èƒ½æŒç»­æ—¶é—´ä¸º1ç§’
         Logic.continueTime = 1f;
-        //½«¼¼ÄÜ¼ÓÈëskillLogic
+        //å°†æŠ€èƒ½åŠ å…¥skillLogic
         skillLogic.Add(Logic);
-        //¼ì²éÈ·ÈÏ¼¼ÄÜµÄOnRemove·½·¨Î´Ö´ĞĞ
+        //æ£€æŸ¥ç¡®è®¤æŠ€èƒ½çš„OnRemoveæ–¹æ³•æœªæ‰§è¡Œ
         Assert.IsFalse(Logic.RunRemove);
         yield return new WaitForSeconds(0.5f);
-        //µÈ´ı0.5Ãë£¬¼ì²éÊÇ·ñÌáÇ°Ö´ĞĞÁËOnRemove
+        //ç­‰å¾…0.5ç§’ï¼Œæ£€æŸ¥æ˜¯å¦æå‰æ‰§è¡Œäº†OnRemove
         Assert.IsFalse(Logic.RunRemove);
-        //µÈ´ı2Ãëºó£¬²é¿´ÊÇ·ñ×Ô¶¯OnRemove¼¼ÄÜ
+        //ç­‰å¾…2ç§’åï¼ŒæŸ¥çœ‹æ˜¯å¦è‡ªåŠ¨OnRemoveæŠ€èƒ½
         yield return new WaitForSeconds(2);
         Assert.IsTrue(Logic.RunRemove);
         
@@ -90,43 +90,43 @@ public class SkillLogicManagerTest
     [UnityTest]
     public IEnumerator SkillLogic_Manager_Test_Continue()
     {
-        //ÉèÖÃ¼¼ÄÜ³ÖĞøÊ±¼äÎª1Ãë
+        //è®¾ç½®æŠ€èƒ½æŒç»­æ—¶é—´ä¸º1ç§’
         Logic.continueTime = 1f;
-        //ÉèÖÃ¼¼ÄÜ³ÖĞøÖ´ĞĞ¼ä¸ôÎª0.1Ãë
+        //è®¾ç½®æŠ€èƒ½æŒç»­æ‰§è¡Œé—´éš”ä¸º0.1ç§’
         Logic.continueDeltaTime = 0.1f;
-        //½«¼¼ÄÜÉèÖÃÎªARCÄ£Ê½,ÕâÑù»áÖ´ĞĞAdd,RemoveºÍContinue·½·¨
+        //å°†æŠ€èƒ½è®¾ç½®ä¸ºARCæ¨¡å¼,è¿™æ ·ä¼šæ‰§è¡ŒAdd,Removeå’ŒContinueæ–¹æ³•
         Logic.effectType = SkillEffectType.ARModelAndContinue;
-        //¼ì²éContinue·½·¨Î´Ö´ĞĞ
+        //æ£€æŸ¥Continueæ–¹æ³•æœªæ‰§è¡Œ
         Assert.IsFalse(Logic.RunContinue);
-        //½«¼¼ÄÜÌí¼Ó½øÈ¥
+        //å°†æŠ€èƒ½æ·»åŠ è¿›å»
         skillLogic.Add(Logic);
-        //ÔÙ´Î¼ì²éÈ·ÈÏContinue·½·¨Î´Ö´ĞĞ
+        //å†æ¬¡æ£€æŸ¥ç¡®è®¤Continueæ–¹æ³•æœªæ‰§è¡Œ
         Assert.IsFalse(Logic.RunContinue);
-        //µÈ´ı2Ãë
+        //ç­‰å¾…2ç§’
         yield return new WaitForSeconds(2);
-        //¼ì²éÈ·ÈÏContinue·½·¨ÒÑ¾­Ö´ĞĞ
+        //æ£€æŸ¥ç¡®è®¤Continueæ–¹æ³•å·²ç»æ‰§è¡Œ
         Assert.IsTrue(Logic.RunContinue);
     }
 
     /// <summary>
-    /// ¼¼ÄÜ´¥·¢ºóµÄ³ÖĞø´¥·¢¼ä¸ô¼ì²â
+    /// æŠ€èƒ½è§¦å‘åçš„æŒç»­è§¦å‘é—´éš”æ£€æµ‹
     /// </summary>
     /// <returns></returns>
     [UnityTest]
     public IEnumerator SkillLogic_Manager_Test_ContinueRunDelta()
     {
-        //ÉèÖÃ¼¼ÄÜ³ÖĞøÊ±¼äÎª1Ãë
+        //è®¾ç½®æŠ€èƒ½æŒç»­æ—¶é—´ä¸º1ç§’
         Logic.continueTime = 1f;
-        //ÉèÖÃ¼¼ÄÜ³ÖĞøÖ´ĞĞ¼ä¸ôÎª0.2Ãë
+        //è®¾ç½®æŠ€èƒ½æŒç»­æ‰§è¡Œé—´éš”ä¸º0.2ç§’
         Logic.continueDeltaTime = 0.2f;
-        //½«¼¼ÄÜÉèÖÃÎªARCÄ£Ê½,ÕâÑù»áÖ´ĞĞAdd,RemoveºÍContinue·½·¨
+        //å°†æŠ€èƒ½è®¾ç½®ä¸ºARCæ¨¡å¼,è¿™æ ·ä¼šæ‰§è¡ŒAdd,Removeå’ŒContinueæ–¹æ³•
         Logic.effectType = SkillEffectType.ARModelAndContinue;
-        //½«¼¼ÄÜÌí¼Ó½øÈ¥
+        //å°†æŠ€èƒ½æ·»åŠ è¿›å»
         skillLogic.Add(Logic);
-        //µÈ´ı2Ãë
+        //ç­‰å¾…2ç§’
         yield return new WaitForSeconds(2);
         var count = Logic.continueTime / Logic.continueDeltaTime;
-        //¼ì²éÈ·ÈÏContinue·½·¨µÄÖ´ĞĞ´ÎÊıÊÇ·ñÓĞÎó
+        //æ£€æŸ¥ç¡®è®¤Continueæ–¹æ³•çš„æ‰§è¡Œæ¬¡æ•°æ˜¯å¦æœ‰è¯¯
         Assert.IsTrue(Logic.RunContinueCount == count);
     }
 

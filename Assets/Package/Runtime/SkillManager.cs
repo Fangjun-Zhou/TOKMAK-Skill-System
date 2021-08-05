@@ -11,13 +11,13 @@ namespace FinTOKMAK.SkillSystem
     public class SkillManager:MonoBehaviour
     {
         public float cdDetectionInterval = 0.1f;
-        //ËùÓĞ¿ÉÓÃ¼¼ÄÜµÄÊµÏÖ
+        //æ‰€æœ‰å¯ç”¨æŠ€èƒ½çš„å®ç°
         public List<Skill> skills = new List<Skill>();
 
-        //ËùÓĞµÄ¼¼ÄÜÊÂ¼şÃû³Æ
+        //æ‰€æœ‰çš„æŠ€èƒ½äº‹ä»¶åç§°
         public List<string> skillEventsName = new List<string>();
 
-        //Âß¼­¹ÜÀíÆ÷(BUFF)Ö´ĞĞ¾ßÌåµÄ¼¼ÄÜÂß¼­
+        //é€»è¾‘ç®¡ç†å™¨(BUFF)æ‰§è¡Œå…·ä½“çš„æŠ€èƒ½é€»è¾‘
         private SkillLogicManager manager;
 
         public Dictionary<string, Action> skillEvents=new Dictionary<string, Action>();
@@ -26,21 +26,21 @@ namespace FinTOKMAK.SkillSystem
         {
             manager = GetComponent<SkillLogicManager>();
 
-            //»ñÈ¡ËùÓĞµÄ¼¼ÄÜ£¬²¢´´½¨¶ÔÓ¦µÄÄäÃûÎ¯ÍĞ
+            //è·å–æ‰€æœ‰çš„æŠ€èƒ½ï¼Œå¹¶åˆ›å»ºå¯¹åº”çš„åŒ¿åå§”æ‰˜
             foreach (string name in skillEventsName)
             {
                 skillEvents.Add(name, () => { });
             }
 
-            //±éÀúËùÓĞµÄ¼¼ÄÜ£¬²¢ÇÒ½«Ö´ĞĞÂß¼­µÄ´¥·¢Ìõ¼ş£¬¼ÓÈë¶ÔÓ¦µÄÊÂ¼ş¼àÌıÖĞ
+            //éå†æ‰€æœ‰çš„æŠ€èƒ½ï¼Œå¹¶ä¸”å°†æ‰§è¡Œé€»è¾‘çš„è§¦å‘æ¡ä»¶ï¼ŒåŠ å…¥å¯¹åº”çš„äº‹ä»¶ç›‘å¬ä¸­
             foreach (Skill skill in skills)
             {
                 skill.info.remainingActiveCount = skill.info.activeCount;
                 skill.logic.id = skill.info.id;
-                //Èç¹û¼¼ÄÜÎªÁ¢¼´´¥·¢Ä£Ê½
+                //å¦‚æœæŠ€èƒ½ä¸ºç«‹å³è§¦å‘æ¨¡å¼
                 if (skill.info.triggerType == TriggerType.Instance)
                 {
-                    //¼àÌı¼¼ÄÜ¶ÔÓ¦µÄ´¥·¢ÊÂ¼ş£¬µ±¸ÃÊÂ¼ş´¥·¢Ê±£¬½«¼¼ÄÜ¼ÓÈëmanager£¬²¢Ö´ĞĞ¶ÔÓ¦onAdd
+                    //ç›‘å¬æŠ€èƒ½å¯¹åº”çš„è§¦å‘äº‹ä»¶ï¼Œå½“è¯¥äº‹ä»¶è§¦å‘æ—¶ï¼Œå°†æŠ€èƒ½åŠ å…¥managerï¼Œå¹¶æ‰§è¡Œå¯¹åº”onAdd
                     skillEvents[skill.info.triggerEventName] += () => {
                         if (skill.info.remainingActiveCount>0)
                         {
@@ -50,27 +50,27 @@ namespace FinTOKMAK.SkillSystem
                         }
                         else
                         {
-                            Debug.Log("¼¼ÄÜÀäÈ´ÖĞ");
+                            Debug.Log("æŠ€èƒ½å†·å´ä¸­");
                         }
                         
                     };
                 }
 
-                //Èç¹û¼¼ÄÜÎª×¼±¸Ä£Ê½£¬Ôò½«
+                //å¦‚æœæŠ€èƒ½ä¸ºå‡†å¤‡æ¨¡å¼ï¼Œåˆ™å°†
                 else if (skill.info.triggerType == TriggerType.Prepared)
                 {
 
 
-                    //¿ªÊ¼¼àÌı¼¼ÄÜ×¼±¸ÊÂ¼ş
+                    //å¼€å§‹ç›‘å¬æŠ€èƒ½å‡†å¤‡äº‹ä»¶
                     skillEvents[skill.info.prepareEventName] += skill.PrepareAction;
-                    //PrepareActionÓ¦¸ÃÊµÏÖµÄÄÚÈİ£º
+                    //PrepareActionåº”è¯¥å®ç°çš„å†…å®¹ï¼š
                     //public void PrepareAction()
                     //{
                     //    skillEvents[skill.TriggerActionName] += () => {
                     //        manager.Add(skill.skillLogic);
                     //    };
                     //}
-                    //¼àÌı¼¼ÄÜÈ¡ÏûÊÂ¼ş
+                    //ç›‘å¬æŠ€èƒ½å–æ¶ˆäº‹ä»¶
                     foreach (string CancelAction in skill.info.cancelEventName)
                     {
                         skillEvents[CancelAction] += () => {
@@ -85,10 +85,10 @@ namespace FinTOKMAK.SkillSystem
         private void Update()
         {
             time += Time.deltaTime;
-            if (time < cdDetectionInterval)//¼¼ÄÜ¼ì²â¼ä¸ô
+            if (time < cdDetectionInterval)//æŠ€èƒ½æ£€æµ‹é—´éš”
                 return;
             time = 0;
-            foreach (Skill skill in skills)//±éÀúËùÓĞ¼¼ÄÜ£¬¼ì²éCDÊ±¼ä
+            foreach (Skill skill in skills)//éå†æ‰€æœ‰æŠ€èƒ½ï¼Œæ£€æŸ¥CDæ—¶é—´
             {
                 if (skill.info.cdEndTime < Time.realtimeSinceStartup && skill.info.remainingActiveCount < skill.info.activeCount)
                 {
@@ -103,41 +103,41 @@ namespace FinTOKMAK.SkillSystem
         }
 
         /// <summary>
-        /// Ìí¼Ó¼¼ÄÜµ½¿ÉÓÃ¼¼ÄÜÁĞ±í
+        /// æ·»åŠ æŠ€èƒ½åˆ°å¯ç”¨æŠ€èƒ½åˆ—è¡¨
         /// </summary>
-        /// <param name="logic">ÒªÌí¼ÓµÄ¼¼ÄÜÀàĞÍ</param>
+        /// <param name="logic">è¦æ·»åŠ çš„æŠ€èƒ½ç±»å‹</param>
         public void Add(Skill skill)
         {
             Debug.Log($"AddSKill:{skill.info.id}");
-            var theSkillLogic = skills.FirstOrDefault(cus => cus.info.id == skill.info.id);//ÄÃµ½µÚÒ»¸öIDÏàÍ¬µÄ¼¼ÄÜ
+            var theSkillLogic = skills.FirstOrDefault(cus => cus.info.id == skill.info.id);//æ‹¿åˆ°ç¬¬ä¸€ä¸ªIDç›¸åŒçš„æŠ€èƒ½
             if (theSkillLogic == null)
                 skills.Add(skill);
             else
-                Debug.Log($"¸Ã¼¼ÄÜÒÑ´æÔÚ:{skill.info.id}");
+                Debug.Log($"è¯¥æŠ€èƒ½å·²å­˜åœ¨:{skill.info.id}");
           
         }
 
        /// <summary>
-       /// ½«¼¼ÄÜ´Ó¿ÉÓÃÁĞ±íÖĞÒÆ³ı
+       /// å°†æŠ€èƒ½ä»å¯ç”¨åˆ—è¡¨ä¸­ç§»é™¤
        /// </summary>
-       /// <param name="ID">¼¼ÄÜID</param>
+       /// <param name="ID">æŠ€èƒ½ID</param>
         public void Remove(string ID)
         {
-            var removeCount = skills.RemoveAll(cus => cus.info.id ==ID);//ÄÃµ½µÚÒ»¸öIDÏàÍ¬µÄ¼¼ÄÜ
+            var removeCount = skills.RemoveAll(cus => cus.info.id ==ID);//æ‹¿åˆ°ç¬¬ä¸€ä¸ªIDç›¸åŒçš„æŠ€èƒ½
             if (removeCount >= 1)
-                Debug.Log($"¸Ã¼¼ÄÜÒÑÒÆ³ı");
+                Debug.Log($"è¯¥æŠ€èƒ½å·²ç§»é™¤");
             else
-                Debug.Log($"¸Ã¼¼ÄÜ²»´æÔÚ");
+                Debug.Log($"è¯¥æŠ€èƒ½ä¸å­˜åœ¨");
         }
 
         /// <summary>
-        /// »ñÈ¡ÁĞ±íÀïµÄ¼¼ÄÜ
+        /// è·å–åˆ—è¡¨é‡Œçš„æŠ€èƒ½
         /// </summary>
-        /// <param name="ID">¼¼ÄÜID</param>
-        /// <returns>·µ»Ø¶ÔÓ¦¼¼ÄÜ£¬Èç¹û¼¼ÄÜ²»´æÔÚÔò·µ»Ønull</returns>
+        /// <param name="ID">æŠ€èƒ½ID</param>
+        /// <returns>è¿”å›å¯¹åº”æŠ€èƒ½ï¼Œå¦‚æœæŠ€èƒ½ä¸å­˜åœ¨åˆ™è¿”å›null</returns>
         public Skill Get(string ID)
         {
-            return skills.FirstOrDefault(cus => cus.info.id == ID);//ÄÃµ½µÚÒ»¸öIDÏàÍ¬µÄ¼¼ÄÜ
+            return skills.FirstOrDefault(cus => cus.info.id == ID);//æ‹¿åˆ°ç¬¬ä¸€ä¸ªIDç›¸åŒçš„æŠ€èƒ½
         }
 
         public void Clear()
