@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using FinTOKMAK.SkillSystem;
 using NUnit.Framework;
 using UnityEngine;
@@ -18,8 +17,9 @@ public class SkillLogicManagerTest
     // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
     // `yield return null;` to skip a frame.
     private GameObject gameObject;
-    private SkillLogicManager skillLogic;
     private TestSkillLogic Logic;
+    private SkillLogicManager skillLogic;
+
     [SetUp]
     public void Init()
     {
@@ -32,10 +32,11 @@ public class SkillLogicManagerTest
         Logic.continueTime = 1f;
         Logic.id = "Logic";
     }
+
     [TearDown]
     public void Destroy()
     {
-        GameObject.Destroy(gameObject);
+        Object.Destroy(gameObject);
         skillLogic = null;
         Logic = null;
     }
@@ -52,13 +53,12 @@ public class SkillLogicManagerTest
     }
 
     /// <summary>
-    /// 主动调用Remove方法来结束技能
+    ///     主动调用Remove方法来结束技能
     /// </summary>
     /// <returns></returns>
     [UnityTest]
     public IEnumerator SkillLogic_Manager_Test_Remove()
     {
-
         //将技能加入skillLogic
         skillLogic.Add(Logic);
         //检查确认技能的OnRemove方法未执行
@@ -85,8 +85,8 @@ public class SkillLogicManagerTest
         //等待2秒后，查看是否自动OnRemove技能
         yield return new WaitForSeconds(2);
         Assert.IsTrue(Logic.RunRemove);
-        
     }
+
     [UnityTest]
     public IEnumerator SkillLogic_Manager_Test_Continue()
     {
@@ -109,7 +109,7 @@ public class SkillLogicManagerTest
     }
 
     /// <summary>
-    /// 技能触发后的持续触发间隔检测
+    ///     技能触发后的持续触发间隔检测
     /// </summary>
     /// <returns></returns>
     [UnityTest]
@@ -133,10 +133,10 @@ public class SkillLogicManagerTest
 
     public class TestSkillLogic : SkillLogic
     {
-        public bool RunAdd = false;
-        public bool RunRemove = false;
-        public bool RunContinue =  false;
-        public int RunContinueCount = 0;
+        public bool RunAdd;
+        public bool RunRemove;
+        public bool RunContinue;
+        public int RunContinueCount;
 
         public override void OnAdd(SkillLogicManager targer, SkillLogic self)
         {
@@ -158,5 +158,4 @@ public class SkillLogicManagerTest
             Debug.Log($"ContinueCoun:{RunContinueCount}");
         }
     }
-
 }
