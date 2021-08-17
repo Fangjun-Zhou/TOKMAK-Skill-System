@@ -16,29 +16,29 @@ public class SkillLogicManagerTest
 
     // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
     // `yield return null;` to skip a frame.
-    private GameObject gameObject;
-    private TestSkillLogic Logic;
-    private SkillLogicManager skillLogic;
+    private GameObject _gameObject;
+    private TestSkillLogic _logic;
+    private SkillLogicManager _logicManager;
 
     [SetUp]
     public void Init()
     {
-        gameObject = new GameObject();
-        skillLogic = gameObject.AddComponent<SkillLogicManager>();
-        Logic = new TestSkillLogic();
-        Logic.continueDeltaTime = 0.02f;
-        Logic.effectType = SkillEffectType.ARModel;
-        Logic.continueStopTimeOverlay = true;
-        Logic.continueTime = 1f;
-        Logic.id = "Logic";
+        _gameObject = new GameObject();
+        _logicManager = _gameObject.AddComponent<SkillLogicManager>();
+        _logic = new TestSkillLogic();
+        _logic.continueDeltaTime = 0.02f;
+        _logic.effectType = SkillEffectType.ARMode;
+        _logic.continueStopTimeOverlay = true;
+        _logic.continueTime = 1f;
+        _logic.id = "Logic";
     }
 
     [TearDown]
     public void Destroy()
     {
-        Object.Destroy(gameObject);
-        skillLogic = null;
-        Logic = null;
+        Object.Destroy(_gameObject);
+        _logicManager = null;
+        _logic = null;
     }
 
     [UnityTest]
@@ -46,9 +46,9 @@ public class SkillLogicManagerTest
     {
         // Use the Assert class to test conditions.
         // Use yield to skip a frame.
-        Assert.IsFalse(Logic.RunAdd);
-        skillLogic.Add(Logic);
-        Assert.IsTrue(Logic.RunAdd);
+        Assert.IsFalse(_logic.runAdd);
+        _logicManager.Add(_logic);
+        Assert.IsTrue(_logic.runAdd);
         yield return null;
     }
 
@@ -60,13 +60,13 @@ public class SkillLogicManagerTest
     public IEnumerator SkillLogic_Manager_Test_Remove()
     {
         //将技能加入skillLogic
-        skillLogic.Add(Logic);
+        _logicManager.Add(_logic);
         //检查确认技能的OnRemove方法未执行
-        Assert.IsFalse(Logic.RunRemove);
+        Assert.IsFalse(_logic.runRemove);
         //调用Remove方法移除技能
-        skillLogic.Remove(Logic.id);
+        _logicManager.Remove(_logic.id);
         //检查移除技能触发的OnRemove方法是否执行了
-        Assert.IsTrue(Logic.RunRemove);
+        Assert.IsTrue(_logic.runRemove);
         yield return null;
     }
 
@@ -74,38 +74,38 @@ public class SkillLogicManagerTest
     public IEnumerator SkillLogic_Manager_Test_AutoRemove()
     {
         //设置技能持续时间为1秒
-        Logic.continueTime = 1f;
+        _logic.continueTime = 1f;
         //将技能加入skillLogic
-        skillLogic.Add(Logic);
+        _logicManager.Add(_logic);
         //检查确认技能的OnRemove方法未执行
-        Assert.IsFalse(Logic.RunRemove);
+        Assert.IsFalse(_logic.runRemove);
         yield return new WaitForSeconds(0.5f);
         //等待0.5秒，检查是否提前执行了OnRemove
-        Assert.IsFalse(Logic.RunRemove);
+        Assert.IsFalse(_logic.runRemove);
         //等待2秒后，查看是否自动OnRemove技能
         yield return new WaitForSeconds(2);
-        Assert.IsTrue(Logic.RunRemove);
+        Assert.IsTrue(_logic.runRemove);
     }
 
     [UnityTest]
     public IEnumerator SkillLogic_Manager_Test_Continue()
     {
         //设置技能持续时间为1秒
-        Logic.continueTime = 1f;
+        _logic.continueTime = 1f;
         //设置技能持续执行间隔为0.1秒
-        Logic.continueDeltaTime = 0.1f;
+        _logic.continueDeltaTime = 0.1f;
         //将技能设置为ARC模式,这样会执行Add,Remove和Continue方法
-        Logic.effectType = SkillEffectType.ARModelAndContinue;
+        _logic.effectType = SkillEffectType.ARContinueMode;
         //检查Continue方法未执行
-        Assert.IsFalse(Logic.RunContinue);
+        Assert.IsFalse(_logic.runContinue);
         //将技能添加进去
-        skillLogic.Add(Logic);
+        _logicManager.Add(_logic);
         //再次检查确认Continue方法未执行
-        Assert.IsFalse(Logic.RunContinue);
+        Assert.IsFalse(_logic.runContinue);
         //等待2秒
         yield return new WaitForSeconds(2);
         //检查确认Continue方法已经执行
-        Assert.IsTrue(Logic.RunContinue);
+        Assert.IsTrue(_logic.runContinue);
     }
 
     /// <summary>
@@ -116,46 +116,46 @@ public class SkillLogicManagerTest
     public IEnumerator SkillLogic_Manager_Test_ContinueRunDelta()
     {
         //设置技能持续时间为1秒
-        Logic.continueTime = 1f;
+        _logic.continueTime = 1f;
         //设置技能持续执行间隔为0.2秒
-        Logic.continueDeltaTime = 0.2f;
+        _logic.continueDeltaTime = 0.2f;
         //将技能设置为ARC模式,这样会执行Add,Remove和Continue方法
-        Logic.effectType = SkillEffectType.ARModelAndContinue;
+        _logic.effectType = SkillEffectType.ARContinueMode;
         //将技能添加进去
-        skillLogic.Add(Logic);
+        _logicManager.Add(_logic);
         //等待2秒
         yield return new WaitForSeconds(2);
-        var count = Logic.continueTime / Logic.continueDeltaTime;
+        var count = (int)(_logic.continueTime / _logic.continueDeltaTime);
         //检查确认Continue方法的执行次数是否有误
-        Assert.IsTrue(Logic.RunContinueCount == count);
+        Assert.IsTrue(_logic.runContinueCount == count);
     }
 
 
     public class TestSkillLogic : SkillLogic
     {
-        public bool RunAdd;
-        public bool RunRemove;
-        public bool RunContinue;
-        public int RunContinueCount;
+        public bool runAdd;
+        public bool runRemove;
+        public bool runContinue;
+        public int runContinueCount;
 
         public override void OnAdd(SkillLogicManager targer, SkillLogic self)
         {
             base.OnAdd(targer, self);
-            RunAdd = true;
+            runAdd = true;
         }
 
         public override void OnRemove()
         {
             base.OnRemove();
-            RunRemove = true;
+            runRemove = true;
         }
 
         public override void OnContinue()
         {
             base.OnContinue();
-            RunContinue = true;
-            RunContinueCount++;
-            Debug.Log($"ContinueCoun:{RunContinueCount}");
+            runContinue = true;
+            runContinueCount++;
+            Debug.Log($"ContinueCoun:{runContinueCount}");
         }
     }
 }
