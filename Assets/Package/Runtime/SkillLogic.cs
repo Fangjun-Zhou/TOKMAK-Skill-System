@@ -33,7 +33,6 @@ namespace FinTOKMAK.SkillSystem
         public bool continueStopTimeOverlay;
 
         /// <summary>
-        ///     s
         ///     技能在持续模式下的执行间隔(秒)
         /// </summary>
         public float continueDeltaTime;
@@ -75,16 +74,16 @@ namespace FinTOKMAK.SkillSystem
         /// <summary>
         ///     添加、移除时生效
         /// </summary>
-        ARModel,
+        ARMode,
 
         /// <summary>
         ///     持续生效
         /// </summary>
-        Continue,
+        ContinueMode,
 
         /// <summary>
         ///     添加、移除、持续生效
         /// </summary>
-        ARModelAndContinue
+        ARContinueMode
     }
 }

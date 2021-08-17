@@ -23,7 +23,7 @@ namespace FinTOKMAK.SkillSystem
             {
                 if (x.continueStopTime >= time) //停止时间大于当前时间，说明技能没失效
                 {
-                    if (x.effectType != SkillEffectType.ARModel && x.continueDeltaTimeNext <= time) //检查技能模式和持续执行间隔
+                    if (x.effectType != SkillEffectType.ARMode && x.continueDeltaTimeNext <= time) //检查技能模式和持续执行间隔
                     {
                         Debug.Log($"ContinueSkill:{x.id},ContinueDeltaTimeNext:{x.continueDeltaTimeNext},Time:{time}");
                         x.OnContinue();
