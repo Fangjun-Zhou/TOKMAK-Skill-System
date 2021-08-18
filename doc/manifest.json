@@ -1,0 +1,186 @@
+{
+  "homepages": [],
+  "source_base_path": "/Users/fangjunzhou/Documents/Unity_Project/skill-system/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.SkillSystem.Skill.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.SkillSystem.Skill.html",
+          "hash": "iHAvkNBsMjUqC6Hq9lMmi9XC9rTAfYLgp2zd8MwBAQ8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.SkillSystem.SkillEffectType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.SkillSystem.SkillEffectType.html",
+          "hash": "K5tCUY+NxLxmQGVkL1bG649CyC2EncpN/cefwRX7bek="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.SkillSystem.SkillInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.SkillSystem.SkillInfo.html",
+          "hash": "E6lgkywHq12OpCfb5TiGkPl8Gkx0eD/PuxcGn00XSQ4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.SkillSystem.SkillLogic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.SkillSystem.SkillLogic.html",
+          "hash": "rf0kvFQIFqgG7HIvmm0jKJUTsaABO9Di4YxUMUVMKQc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.SkillSystem.SkillLogicManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.SkillSystem.SkillLogicManager.html",
+          "hash": "oTQe73qzfGxutoDjAQQ00fV1815y1eFjmP8Xj5JNiT8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.SkillSystem.SkillManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.SkillSystem.SkillManager.html",
+          "hash": "ZjwXrZ0s4LZAPCgilatgOdlcARufmNLxoTqdGr1zQXw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.SkillSystem.TriggerType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.SkillSystem.TriggerType.html",
+          "hash": "IsAfAVdtBhf92wyr4gUyQVtwu36HgDLxHcNFR0EAlDU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FinTOKMAK.SkillSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FinTOKMAK.SkillSystem.html",
+          "hash": "f1Y+Blt5rKwJDDTWCgmlmmWiVM/UqOFhmWgbsrHWbjU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "M2CObIbgsW6ABkc3uDL7gvWWLQ5axdRInZEschP8Ius="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "73SZ06qe3DK+CVt2aEO2IILmTSRDxllL/rvcnz/B4yk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "CiILs2ltd05yRUIjuQ2qhKaUXzNlihUwKIh2/7diOYo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 3
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 8,
+          "skipped_file_count": 5
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
