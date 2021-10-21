@@ -1,5 +1,26 @@
 {
   "dependencies": {
+    "com.dbrizov.naughtyattributes": {
+      "version": "https://github.com/dbrizov/NaughtyAttributes.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "6ff42768879f6d3721f27c1fc1ba0c1d145a3f27"
+    },
+    "com.fintokmak.timelinesystem": {
+      "version": "http://anw.noip.cn:8010/Fangjun_Zhou/tokmak-timeline-system.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "9621d771c118710c35882732bd0d203420f413f5"
+    },
+    "com.serializabledictionary": {
+      "version": "https://github.com/Fangjun-Zhou/Unity-SerializableDictionary.git#upm-serializabledictionary",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "9bc332f23c44fd68484e16a2d769a1b0e9f216b2"
+    },
     "com.unity.addressables": {
       "version": "1.19.4",
       "depth": 1,
