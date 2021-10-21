@@ -54,7 +54,6 @@
   <ItemGroup>
      <Compile Include="Assets\Package\Runtime\SkillInfo.cs" />
      <Compile Include="Assets\Package\Runtime\SkillEventNameConfig.cs" />
-     <Compile Include="Assets\Package\Runtime\SkillLogic.cs" />
      <Compile Include="Assets\Package\Runtime\Skill.cs" />
      <Compile Include="Assets\Package\Runtime\SkillManager.cs" />
      <Compile Include="Assets\Package\Runtime\SkillLogicManager.cs" />
@@ -655,6 +654,9 @@
  </Reference>
  <Reference Include="Unity.Localization">
  <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/Unity.Localization.dll</HintPath>
+ </Reference>
+ <Reference Include="NaughtyAttributes.Core">
+ <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/NaughtyAttributes.Core.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>

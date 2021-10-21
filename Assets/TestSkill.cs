@@ -5,7 +5,7 @@ namespace DefaultNamespace
 {
     [CreateAssetMenu(fileName = "Test Skill Logic", menuName = "FinTOKMAK/Skill System/Skill Logics/Test",
         order = 0)]
-    public class TestSkill : SkillLogic
+    public class TestSkill : Skill
     {
         public override void OnInitialization(SkillLogicManager manager)
         {
@@ -14,7 +14,7 @@ namespace DefaultNamespace
             Debug.Log("Initialized.");
         }
 
-        public override void OnAdd(SkillLogic self)
+        public override void OnAdd(Skill self)
         {
             base.OnAdd(self);
             
