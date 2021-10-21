@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SkillInfo
    ">
-    <meta name="generator" content="docfx 2.58.0.0">
+    <meta name="generator" content="docfx 2.58.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -92,8 +92,14 @@
                           <li class="">
                             <a href="FinTOKMAK.SkillSystem.SkillEffectType.html" title="SkillEffectType" class="">SkillEffectType</a>
                           </li>
+                          <li class="">
+                            <a href="FinTOKMAK.SkillSystem.SkillEventNameConfig.html" title="SkillEventNameConfig" class="">SkillEventNameConfig</a>
+                          </li>
                           <li class="active">
                             <a href="FinTOKMAK.SkillSystem.SkillInfo.html" title="SkillInfo" class="active">SkillInfo</a>
+                          </li>
+                          <li class="">
+                            <a href="FinTOKMAK.SkillSystem.SkillInfoEditor.html" title="SkillInfoEditor" class="">SkillInfoEditor</a>
                           </li>
                           <li class="">
                             <a href="FinTOKMAK.SkillSystem.SkillLogic.html" title="SkillLogic" class="">SkillLogic</a>
@@ -103,6 +109,9 @@
                           </li>
                           <li class="">
                             <a href="FinTOKMAK.SkillSystem.SkillManager.html" title="SkillManager" class="">SkillManager</a>
+                          </li>
+                          <li class="">
+                            <a href="FinTOKMAK.SkillSystem.SkillManager.SkillStatus.html" title="SkillManager.SkillStatus" class="">SkillManager.SkillStatus</a>
                           </li>
                           <li class="">
                             <a href="FinTOKMAK.SkillSystem.TriggerType.html" title="TriggerType" class="">TriggerType</a>
@@ -137,31 +146,6 @@
   </h3>
   
   
-  <h4 id="FinTOKMAK_SkillSystem_SkillInfo_activeCount" data-uid="FinTOKMAK.SkillSystem.SkillInfo.activeCount">activeCount</h4>
-  <div class="markdown level1 summary"><p>当前可用技能数量</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int activeCount</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <h4 id="FinTOKMAK_SkillSystem_SkillInfo_cancelEventName" data-uid="FinTOKMAK.SkillSystem.SkillInfo.cancelEventName">cancelEventName</h4>
   <div class="markdown level1 summary"><p>取消事件名称列表</p>
 </div>
@@ -180,7 +164,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -213,7 +197,8 @@
   
   
   <h4 id="FinTOKMAK_SkillSystem_SkillInfo_cdEndTime" data-uid="FinTOKMAK.SkillSystem.SkillInfo.cdEndTime">cdEndTime</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>结束冷却的时间</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -236,13 +221,13 @@
   </table>
   
   
-  <h4 id="FinTOKMAK_SkillSystem_SkillInfo_description" data-uid="FinTOKMAK.SkillSystem.SkillInfo.description">description</h4>
-  <div class="markdown level1 summary"><p>技能的描述（用户交互用）</p>
+  <h4 id="FinTOKMAK_SkillSystem_SkillInfo_cumulateCount" data-uid="FinTOKMAK.SkillSystem.SkillInfo.cumulateCount">cumulateCount</h4>
+  <div class="markdown level1 summary"><p>当前可用技能数量</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string description</code></pre>
+    <pre><code class="lang-csharp hljs">public int cumulateCount</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -254,7 +239,57 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="FinTOKMAK_SkillSystem_SkillInfo_description" data-uid="FinTOKMAK.SkillSystem.SkillInfo.description">description</h4>
+  <div class="markdown level1 summary"><p>技能的描述（用户交互用）</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LocalizedString description</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">LocalizedString</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="FinTOKMAK_SkillSystem_SkillInfo_eventNameConfig" data-uid="FinTOKMAK.SkillSystem.SkillInfo.eventNameConfig">eventNameConfig</h4>
+  <div class="markdown level1 summary"><p>技能事件配置文件</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SkillEventNameConfig eventNameConfig</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FinTOKMAK.SkillSystem.SkillEventNameConfig.html">SkillEventNameConfig</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -311,13 +346,13 @@
   </table>
   
   
-  <h4 id="FinTOKMAK_SkillSystem_SkillInfo_maxActiveCount" data-uid="FinTOKMAK.SkillSystem.SkillInfo.maxActiveCount">maxActiveCount</h4>
+  <h4 id="FinTOKMAK_SkillSystem_SkillInfo_maxCumulateCount" data-uid="FinTOKMAK.SkillSystem.SkillInfo.maxCumulateCount">maxCumulateCount</h4>
   <div class="markdown level1 summary"><p>最大可积累技能数量</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int maxActiveCount</code></pre>
+    <pre><code class="lang-csharp hljs">public int maxCumulateCount</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -354,7 +389,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -386,13 +421,13 @@
   </table>
   
   
-  <h4 id="FinTOKMAK_SkillSystem_SkillInfo_skillName" data-uid="FinTOKMAK.SkillSystem.SkillInfo.skillName">skillName</h4>
-  <div class="markdown level1 summary"><p>技能的名称（用户交互用）</p>
+  <h4 id="FinTOKMAK_SkillSystem_SkillInfo_skillIcon" data-uid="FinTOKMAK.SkillSystem.SkillInfo.skillIcon">skillIcon</h4>
+  <div class="markdown level1 summary"><p>The Icon of the skill</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string skillName</code></pre>
+    <pre><code class="lang-csharp hljs">public Texture skillIcon</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -404,7 +439,32 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">Texture</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="FinTOKMAK_SkillSystem_SkillInfo_skillName" data-uid="FinTOKMAK.SkillSystem.SkillInfo.skillName">skillName</h4>
+  <div class="markdown level1 summary"><p>技能的名称（用户交互用）</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LocalizedString skillName</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">LocalizedString</span></td>
         <td></td>
       </tr>
     </tbody>

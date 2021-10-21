@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SkillManager
    ">
-    <meta name="generator" content="docfx 2.58.0.0">
+    <meta name="generator" content="docfx 2.58.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -93,7 +93,13 @@
                             <a href="FinTOKMAK.SkillSystem.SkillEffectType.html" title="SkillEffectType" class="">SkillEffectType</a>
                           </li>
                           <li class="">
+                            <a href="FinTOKMAK.SkillSystem.SkillEventNameConfig.html" title="SkillEventNameConfig" class="">SkillEventNameConfig</a>
+                          </li>
+                          <li class="">
                             <a href="FinTOKMAK.SkillSystem.SkillInfo.html" title="SkillInfo" class="">SkillInfo</a>
+                          </li>
+                          <li class="">
+                            <a href="FinTOKMAK.SkillSystem.SkillInfoEditor.html" title="SkillInfoEditor" class="">SkillInfoEditor</a>
                           </li>
                           <li class="">
                             <a href="FinTOKMAK.SkillSystem.SkillLogic.html" title="SkillLogic" class="">SkillLogic</a>
@@ -103,6 +109,9 @@
                           </li>
                           <li class="active">
                             <a href="FinTOKMAK.SkillSystem.SkillManager.html" title="SkillManager" class="active">SkillManager</a>
+                          </li>
+                          <li class="">
+                            <a href="FinTOKMAK.SkillSystem.SkillManager.SkillStatus.html" title="SkillManager.SkillStatus" class="">SkillManager.SkillStatus</a>
                           </li>
                           <li class="">
                             <a href="FinTOKMAK.SkillSystem.TriggerType.html" title="TriggerType" class="">TriggerType</a>
@@ -161,12 +170,12 @@
   </table>
   
   
-  <h4 id="FinTOKMAK_SkillSystem_SkillManager_skillEvents" data-uid="FinTOKMAK.SkillSystem.SkillManager.skillEvents">skillEvents</h4>
+  <h4 id="FinTOKMAK_SkillSystem_SkillManager_eventNameConfig" data-uid="FinTOKMAK.SkillSystem.SkillManager.eventNameConfig">eventNameConfig</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly Dictionary&lt;string, Action&gt; skillEvents</code></pre>
+    <pre><code class="lang-csharp hljs">public SkillEventNameConfig eventNameConfig</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -178,19 +187,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">Action</span>&gt;</td>
+        <td><a class="xref" href="FinTOKMAK.SkillSystem.SkillEventNameConfig.html">SkillEventNameConfig</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="FinTOKMAK_SkillSystem_SkillManager_skillEventsName" data-uid="FinTOKMAK.SkillSystem.SkillManager.skillEventsName">skillEventsName</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="FinTOKMAK_SkillSystem_SkillManager_preLoadSkills" data-uid="FinTOKMAK.SkillSystem.SkillManager.preLoadSkills">preLoadSkills</h4>
+  <div class="markdown level1 summary"><p>Skills that are added to the player when initialized</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;string&gt; skillEventsName</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;Skill&gt; preLoadSkills</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -202,7 +212,32 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="FinTOKMAK.SkillSystem.Skill.html">Skill</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="FinTOKMAK_SkillSystem_SkillManager_skillEventHook" data-uid="FinTOKMAK.SkillSystem.SkillManager.skillEventHook">skillEventHook</h4>
+  <div class="markdown level1 summary"><p>The skill event hook that can inform external system the skill event has been called</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;string&gt; skillEventHook</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Action</span>&lt;<span class="xref">System.String</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -214,7 +249,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;Skill&gt; skills</code></pre>
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, Skill&gt; skills</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -226,7 +261,35 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="FinTOKMAK.SkillSystem.Skill.html">Skill</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <a class="xref" href="FinTOKMAK.SkillSystem.Skill.html">Skill</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="FinTOKMAK_SkillSystem_SkillManager_useLocalSkillSystem_" data-uid="FinTOKMAK.SkillSystem.SkillManager.useLocalSkillSystem*"></a>
+  <h4 id="FinTOKMAK_SkillSystem_SkillManager_useLocalSkillSystem" data-uid="FinTOKMAK.SkillSystem.SkillManager.useLocalSkillSystem">useLocalSkillSystem</h4>
+  <div class="markdown level1 summary"><p>if localCD is enabled</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool useLocalSkillSystem { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -265,7 +328,8 @@
   
   <a id="FinTOKMAK_SkillSystem_SkillManager_Clear_" data-uid="FinTOKMAK.SkillSystem.SkillManager.Clear*"></a>
   <h4 id="FinTOKMAK_SkillSystem_SkillManager_Clear" data-uid="FinTOKMAK.SkillSystem.SkillManager.Clear">Clear()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Clear all the skills</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -318,6 +382,33 @@
   </table>
   
   
+  <a id="FinTOKMAK_SkillSystem_SkillManager_GetSkillInfo_" data-uid="FinTOKMAK.SkillSystem.SkillManager.GetSkillInfo*"></a>
+  <h4 id="FinTOKMAK_SkillSystem_SkillManager_GetSkillInfo" data-uid="FinTOKMAK.SkillSystem.SkillManager.GetSkillInfo">GetSkillInfo()</h4>
+  <div class="markdown level1 summary"><p>Call this method to get the skill cumulate count for all the skills</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, SkillManager.SkillStatus&gt; GetSkillInfo()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <a class="xref" href="FinTOKMAK.SkillSystem.SkillManager.SkillStatus.html">SkillManager.SkillStatus</a>&gt;</td>
+        <td><p>The dictionary of the cumulate count for all the skills, key is the unique id, value is the cumulateCount</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="FinTOKMAK_SkillSystem_SkillManager_Remove_" data-uid="FinTOKMAK.SkillSystem.SkillManager.Remove*"></a>
   <h4 id="FinTOKMAK_SkillSystem_SkillManager_Remove_System_String_" data-uid="FinTOKMAK.SkillSystem.SkillManager.Remove(System.String)">Remove(String)</h4>
   <div class="markdown level1 summary"><p>将技能从可用列表中移除</p>
@@ -347,13 +438,43 @@
   </table>
   
   
-  <a id="FinTOKMAK_SkillSystem_SkillManager_SkillEvnetsInvoke_" data-uid="FinTOKMAK.SkillSystem.SkillManager.SkillEvnetsInvoke*"></a>
-  <h4 id="FinTOKMAK_SkillSystem_SkillManager_SkillEvnetsInvoke_System_String_" data-uid="FinTOKMAK.SkillSystem.SkillManager.SkillEvnetsInvoke(System.String)">SkillEvnetsInvoke(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="FinTOKMAK_SkillSystem_SkillManager_SetSkillStatus_" data-uid="FinTOKMAK.SkillSystem.SkillManager.SetSkillStatus*"></a>
+  <h4 id="FinTOKMAK_SkillSystem_SkillManager_SetSkillStatus_System_Collections_Generic_Dictionary_System_String_FinTOKMAK_SkillSystem_SkillManager_SkillStatus__" data-uid="FinTOKMAK.SkillSystem.SkillManager.SetSkillStatus(System.Collections.Generic.Dictionary{System.String,FinTOKMAK.SkillSystem.SkillManager.SkillStatus})">SetSkillStatus(Dictionary&lt;String, SkillManager.SkillStatus&gt;)</h4>
+  <div class="markdown level1 summary"><p>Call this method to set the cumulate count of all the skills</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SkillEvnetsInvoke(string SkillEventName)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SetSkillStatus(Dictionary&lt;string, SkillManager.SkillStatus&gt; cdStatus)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <a class="xref" href="FinTOKMAK.SkillSystem.SkillManager.SkillStatus.html">SkillManager.SkillStatus</a>&gt;</td>
+        <td><span class="parametername">cdStatus</span></td>
+        <td><p>all the cumulate count of the skills</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="FinTOKMAK_SkillSystem_SkillManager_SkillEventsInvoke_" data-uid="FinTOKMAK.SkillSystem.SkillManager.SkillEventsInvoke*"></a>
+  <h4 id="FinTOKMAK_SkillSystem_SkillManager_SkillEventsInvoke_System_String_" data-uid="FinTOKMAK.SkillSystem.SkillManager.SkillEventsInvoke(System.String)">SkillEventsInvoke(String)</h4>
+  <div class="markdown level1 summary"><p>Invoke a skill event</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SkillEventsInvoke(string skillEventName)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -367,8 +488,9 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">SkillEventName</span></td>
-        <td></td>
+        <td><span class="parametername">skillEventName</span></td>
+        <td><p>the name of the skill event</p>
+</td>
       </tr>
     </tbody>
   </table>

@@ -25,19 +25,6 @@ references:
   commentId: F:FinTOKMAK.SkillSystem.Skill.logic
   fullName: FinTOKMAK.SkillSystem.Skill.logic
   nameWithType: Skill.logic
-- uid: FinTOKMAK.SkillSystem.Skill.PrepareAction
-  name: PrepareAction()
-  href: api/FinTOKMAK.SkillSystem.Skill.html#FinTOKMAK_SkillSystem_Skill_PrepareAction
-  commentId: M:FinTOKMAK.SkillSystem.Skill.PrepareAction
-  fullName: FinTOKMAK.SkillSystem.Skill.PrepareAction()
-  nameWithType: Skill.PrepareAction()
-- uid: FinTOKMAK.SkillSystem.Skill.PrepareAction*
-  name: PrepareAction
-  href: api/FinTOKMAK.SkillSystem.Skill.html#FinTOKMAK_SkillSystem_Skill_PrepareAction_
-  commentId: Overload:FinTOKMAK.SkillSystem.Skill.PrepareAction
-  isSpec: "True"
-  fullName: FinTOKMAK.SkillSystem.Skill.PrepareAction
-  nameWithType: Skill.PrepareAction
 - uid: FinTOKMAK.SkillSystem.SkillEffectType
   name: SkillEffectType
   href: api/FinTOKMAK.SkillSystem.SkillEffectType.html
@@ -62,18 +49,24 @@ references:
   commentId: F:FinTOKMAK.SkillSystem.SkillEffectType.ContinueMode
   fullName: FinTOKMAK.SkillSystem.SkillEffectType.ContinueMode
   nameWithType: SkillEffectType.ContinueMode
+- uid: FinTOKMAK.SkillSystem.SkillEventNameConfig
+  name: SkillEventNameConfig
+  href: api/FinTOKMAK.SkillSystem.SkillEventNameConfig.html
+  commentId: T:FinTOKMAK.SkillSystem.SkillEventNameConfig
+  fullName: FinTOKMAK.SkillSystem.SkillEventNameConfig
+  nameWithType: SkillEventNameConfig
+- uid: FinTOKMAK.SkillSystem.SkillEventNameConfig.eventNames
+  name: eventNames
+  href: api/FinTOKMAK.SkillSystem.SkillEventNameConfig.html#FinTOKMAK_SkillSystem_SkillEventNameConfig_eventNames
+  commentId: F:FinTOKMAK.SkillSystem.SkillEventNameConfig.eventNames
+  fullName: FinTOKMAK.SkillSystem.SkillEventNameConfig.eventNames
+  nameWithType: SkillEventNameConfig.eventNames
 - uid: FinTOKMAK.SkillSystem.SkillInfo
   name: SkillInfo
   href: api/FinTOKMAK.SkillSystem.SkillInfo.html
   commentId: T:FinTOKMAK.SkillSystem.SkillInfo
   fullName: FinTOKMAK.SkillSystem.SkillInfo
   nameWithType: SkillInfo
-- uid: FinTOKMAK.SkillSystem.SkillInfo.activeCount
-  name: activeCount
-  href: api/FinTOKMAK.SkillSystem.SkillInfo.html#FinTOKMAK_SkillSystem_SkillInfo_activeCount
-  commentId: F:FinTOKMAK.SkillSystem.SkillInfo.activeCount
-  fullName: FinTOKMAK.SkillSystem.SkillInfo.activeCount
-  nameWithType: SkillInfo.activeCount
 - uid: FinTOKMAK.SkillSystem.SkillInfo.cancelEventName
   name: cancelEventName
   href: api/FinTOKMAK.SkillSystem.SkillInfo.html#FinTOKMAK_SkillSystem_SkillInfo_cancelEventName
@@ -92,12 +85,24 @@ references:
   commentId: F:FinTOKMAK.SkillSystem.SkillInfo.cdEndTime
   fullName: FinTOKMAK.SkillSystem.SkillInfo.cdEndTime
   nameWithType: SkillInfo.cdEndTime
+- uid: FinTOKMAK.SkillSystem.SkillInfo.cumulateCount
+  name: cumulateCount
+  href: api/FinTOKMAK.SkillSystem.SkillInfo.html#FinTOKMAK_SkillSystem_SkillInfo_cumulateCount
+  commentId: F:FinTOKMAK.SkillSystem.SkillInfo.cumulateCount
+  fullName: FinTOKMAK.SkillSystem.SkillInfo.cumulateCount
+  nameWithType: SkillInfo.cumulateCount
 - uid: FinTOKMAK.SkillSystem.SkillInfo.description
   name: description
   href: api/FinTOKMAK.SkillSystem.SkillInfo.html#FinTOKMAK_SkillSystem_SkillInfo_description
   commentId: F:FinTOKMAK.SkillSystem.SkillInfo.description
   fullName: FinTOKMAK.SkillSystem.SkillInfo.description
   nameWithType: SkillInfo.description
+- uid: FinTOKMAK.SkillSystem.SkillInfo.eventNameConfig
+  name: eventNameConfig
+  href: api/FinTOKMAK.SkillSystem.SkillInfo.html#FinTOKMAK_SkillSystem_SkillInfo_eventNameConfig
+  commentId: F:FinTOKMAK.SkillSystem.SkillInfo.eventNameConfig
+  fullName: FinTOKMAK.SkillSystem.SkillInfo.eventNameConfig
+  nameWithType: SkillInfo.eventNameConfig
 - uid: FinTOKMAK.SkillSystem.SkillInfo.id
   name: id
   href: api/FinTOKMAK.SkillSystem.SkillInfo.html#FinTOKMAK_SkillSystem_SkillInfo_id
@@ -110,12 +115,12 @@ references:
   commentId: F:FinTOKMAK.SkillSystem.SkillInfo.isActive
   fullName: FinTOKMAK.SkillSystem.SkillInfo.isActive
   nameWithType: SkillInfo.isActive
-- uid: FinTOKMAK.SkillSystem.SkillInfo.maxActiveCount
-  name: maxActiveCount
-  href: api/FinTOKMAK.SkillSystem.SkillInfo.html#FinTOKMAK_SkillSystem_SkillInfo_maxActiveCount
-  commentId: F:FinTOKMAK.SkillSystem.SkillInfo.maxActiveCount
-  fullName: FinTOKMAK.SkillSystem.SkillInfo.maxActiveCount
-  nameWithType: SkillInfo.maxActiveCount
+- uid: FinTOKMAK.SkillSystem.SkillInfo.maxCumulateCount
+  name: maxCumulateCount
+  href: api/FinTOKMAK.SkillSystem.SkillInfo.html#FinTOKMAK_SkillSystem_SkillInfo_maxCumulateCount
+  commentId: F:FinTOKMAK.SkillSystem.SkillInfo.maxCumulateCount
+  fullName: FinTOKMAK.SkillSystem.SkillInfo.maxCumulateCount
+  nameWithType: SkillInfo.maxCumulateCount
 - uid: FinTOKMAK.SkillSystem.SkillInfo.needActiveSkillID
   name: needActiveSkillID
   href: api/FinTOKMAK.SkillSystem.SkillInfo.html#FinTOKMAK_SkillSystem_SkillInfo_needActiveSkillID
@@ -128,6 +133,12 @@ references:
   commentId: F:FinTOKMAK.SkillSystem.SkillInfo.prepareEventName
   fullName: FinTOKMAK.SkillSystem.SkillInfo.prepareEventName
   nameWithType: SkillInfo.prepareEventName
+- uid: FinTOKMAK.SkillSystem.SkillInfo.skillIcon
+  name: skillIcon
+  href: api/FinTOKMAK.SkillSystem.SkillInfo.html#FinTOKMAK_SkillSystem_SkillInfo_skillIcon
+  commentId: F:FinTOKMAK.SkillSystem.SkillInfo.skillIcon
+  fullName: FinTOKMAK.SkillSystem.SkillInfo.skillIcon
+  nameWithType: SkillInfo.skillIcon
 - uid: FinTOKMAK.SkillSystem.SkillInfo.skillName
   name: skillName
   href: api/FinTOKMAK.SkillSystem.SkillInfo.html#FinTOKMAK_SkillSystem_SkillInfo_skillName
@@ -146,12 +157,37 @@ references:
   commentId: F:FinTOKMAK.SkillSystem.SkillInfo.triggerType
   fullName: FinTOKMAK.SkillSystem.SkillInfo.triggerType
   nameWithType: SkillInfo.triggerType
+- uid: FinTOKMAK.SkillSystem.SkillInfoEditor
+  name: SkillInfoEditor
+  href: api/FinTOKMAK.SkillSystem.SkillInfoEditor.html
+  commentId: T:FinTOKMAK.SkillSystem.SkillInfoEditor
+  fullName: FinTOKMAK.SkillSystem.SkillInfoEditor
+  nameWithType: SkillInfoEditor
+- uid: FinTOKMAK.SkillSystem.SkillInfoEditor.OnInspectorGUI
+  name: OnInspectorGUI()
+  href: api/FinTOKMAK.SkillSystem.SkillInfoEditor.html#FinTOKMAK_SkillSystem_SkillInfoEditor_OnInspectorGUI
+  commentId: M:FinTOKMAK.SkillSystem.SkillInfoEditor.OnInspectorGUI
+  fullName: FinTOKMAK.SkillSystem.SkillInfoEditor.OnInspectorGUI()
+  nameWithType: SkillInfoEditor.OnInspectorGUI()
+- uid: FinTOKMAK.SkillSystem.SkillInfoEditor.OnInspectorGUI*
+  name: OnInspectorGUI
+  href: api/FinTOKMAK.SkillSystem.SkillInfoEditor.html#FinTOKMAK_SkillSystem_SkillInfoEditor_OnInspectorGUI_
+  commentId: Overload:FinTOKMAK.SkillSystem.SkillInfoEditor.OnInspectorGUI
+  isSpec: "True"
+  fullName: FinTOKMAK.SkillSystem.SkillInfoEditor.OnInspectorGUI
+  nameWithType: SkillInfoEditor.OnInspectorGUI
 - uid: FinTOKMAK.SkillSystem.SkillLogic
   name: SkillLogic
   href: api/FinTOKMAK.SkillSystem.SkillLogic.html
   commentId: T:FinTOKMAK.SkillSystem.SkillLogic
   fullName: FinTOKMAK.SkillSystem.SkillLogic
   nameWithType: SkillLogic
+- uid: FinTOKMAK.SkillSystem.SkillLogic._manager
+  name: _manager
+  href: api/FinTOKMAK.SkillSystem.SkillLogic.html#FinTOKMAK_SkillSystem_SkillLogic__manager
+  commentId: F:FinTOKMAK.SkillSystem.SkillLogic._manager
+  fullName: FinTOKMAK.SkillSystem.SkillLogic._manager
+  nameWithType: SkillLogic._manager
 - uid: FinTOKMAK.SkillSystem.SkillLogic.continueDeltaTime
   name: continueDeltaTime
   href: api/FinTOKMAK.SkillSystem.SkillLogic.html#FinTOKMAK_SkillSystem_SkillLogic_continueDeltaTime
@@ -194,12 +230,12 @@ references:
   commentId: F:FinTOKMAK.SkillSystem.SkillLogic.id
   fullName: FinTOKMAK.SkillSystem.SkillLogic.id
   nameWithType: SkillLogic.id
-- uid: FinTOKMAK.SkillSystem.SkillLogic.OnAdd(FinTOKMAK.SkillSystem.SkillLogicManager,FinTOKMAK.SkillSystem.SkillLogic)
-  name: OnAdd(SkillLogicManager, SkillLogic)
-  href: api/FinTOKMAK.SkillSystem.SkillLogic.html#FinTOKMAK_SkillSystem_SkillLogic_OnAdd_FinTOKMAK_SkillSystem_SkillLogicManager_FinTOKMAK_SkillSystem_SkillLogic_
-  commentId: M:FinTOKMAK.SkillSystem.SkillLogic.OnAdd(FinTOKMAK.SkillSystem.SkillLogicManager,FinTOKMAK.SkillSystem.SkillLogic)
-  fullName: FinTOKMAK.SkillSystem.SkillLogic.OnAdd(FinTOKMAK.SkillSystem.SkillLogicManager, FinTOKMAK.SkillSystem.SkillLogic)
-  nameWithType: SkillLogic.OnAdd(SkillLogicManager, SkillLogic)
+- uid: FinTOKMAK.SkillSystem.SkillLogic.OnAdd(FinTOKMAK.SkillSystem.SkillLogic)
+  name: OnAdd(SkillLogic)
+  href: api/FinTOKMAK.SkillSystem.SkillLogic.html#FinTOKMAK_SkillSystem_SkillLogic_OnAdd_FinTOKMAK_SkillSystem_SkillLogic_
+  commentId: M:FinTOKMAK.SkillSystem.SkillLogic.OnAdd(FinTOKMAK.SkillSystem.SkillLogic)
+  fullName: FinTOKMAK.SkillSystem.SkillLogic.OnAdd(FinTOKMAK.SkillSystem.SkillLogic)
+  nameWithType: SkillLogic.OnAdd(SkillLogic)
 - uid: FinTOKMAK.SkillSystem.SkillLogic.OnAdd*
   name: OnAdd
   href: api/FinTOKMAK.SkillSystem.SkillLogic.html#FinTOKMAK_SkillSystem_SkillLogic_OnAdd_
@@ -220,6 +256,19 @@ references:
   isSpec: "True"
   fullName: FinTOKMAK.SkillSystem.SkillLogic.OnContinue
   nameWithType: SkillLogic.OnContinue
+- uid: FinTOKMAK.SkillSystem.SkillLogic.OnInitialization(FinTOKMAK.SkillSystem.SkillLogicManager)
+  name: OnInitialization(SkillLogicManager)
+  href: api/FinTOKMAK.SkillSystem.SkillLogic.html#FinTOKMAK_SkillSystem_SkillLogic_OnInitialization_FinTOKMAK_SkillSystem_SkillLogicManager_
+  commentId: M:FinTOKMAK.SkillSystem.SkillLogic.OnInitialization(FinTOKMAK.SkillSystem.SkillLogicManager)
+  fullName: FinTOKMAK.SkillSystem.SkillLogic.OnInitialization(FinTOKMAK.SkillSystem.SkillLogicManager)
+  nameWithType: SkillLogic.OnInitialization(SkillLogicManager)
+- uid: FinTOKMAK.SkillSystem.SkillLogic.OnInitialization*
+  name: OnInitialization
+  href: api/FinTOKMAK.SkillSystem.SkillLogic.html#FinTOKMAK_SkillSystem_SkillLogic_OnInitialization_
+  commentId: Overload:FinTOKMAK.SkillSystem.SkillLogic.OnInitialization
+  isSpec: "True"
+  fullName: FinTOKMAK.SkillSystem.SkillLogic.OnInitialization
+  nameWithType: SkillLogic.OnInitialization
 - uid: FinTOKMAK.SkillSystem.SkillLogic.OnRemove
   name: OnRemove()
   href: api/FinTOKMAK.SkillSystem.SkillLogic.html#FinTOKMAK_SkillSystem_SkillLogic_OnRemove
@@ -233,6 +282,19 @@ references:
   isSpec: "True"
   fullName: FinTOKMAK.SkillSystem.SkillLogic.OnRemove
   nameWithType: SkillLogic.OnRemove
+- uid: FinTOKMAK.SkillSystem.SkillLogic.PrepareAction
+  name: PrepareAction()
+  href: api/FinTOKMAK.SkillSystem.SkillLogic.html#FinTOKMAK_SkillSystem_SkillLogic_PrepareAction
+  commentId: M:FinTOKMAK.SkillSystem.SkillLogic.PrepareAction
+  fullName: FinTOKMAK.SkillSystem.SkillLogic.PrepareAction()
+  nameWithType: SkillLogic.PrepareAction()
+- uid: FinTOKMAK.SkillSystem.SkillLogic.PrepareAction*
+  name: PrepareAction
+  href: api/FinTOKMAK.SkillSystem.SkillLogic.html#FinTOKMAK_SkillSystem_SkillLogic_PrepareAction_
+  commentId: Overload:FinTOKMAK.SkillSystem.SkillLogic.PrepareAction
+  isSpec: "True"
+  fullName: FinTOKMAK.SkillSystem.SkillLogic.PrepareAction
+  nameWithType: SkillLogic.PrepareAction
 - uid: FinTOKMAK.SkillSystem.SkillLogicManager
   name: SkillLogicManager
   href: api/FinTOKMAK.SkillSystem.SkillLogicManager.html
@@ -342,6 +404,12 @@ references:
   isSpec: "True"
   fullName: FinTOKMAK.SkillSystem.SkillManager.Clear
   nameWithType: SkillManager.Clear
+- uid: FinTOKMAK.SkillSystem.SkillManager.eventNameConfig
+  name: eventNameConfig
+  href: api/FinTOKMAK.SkillSystem.SkillManager.html#FinTOKMAK_SkillSystem_SkillManager_eventNameConfig
+  commentId: F:FinTOKMAK.SkillSystem.SkillManager.eventNameConfig
+  fullName: FinTOKMAK.SkillSystem.SkillManager.eventNameConfig
+  nameWithType: SkillManager.eventNameConfig
 - uid: FinTOKMAK.SkillSystem.SkillManager.Get(System.String)
   name: Get(String)
   href: api/FinTOKMAK.SkillSystem.SkillManager.html#FinTOKMAK_SkillSystem_SkillManager_Get_System_String_
@@ -355,6 +423,25 @@ references:
   isSpec: "True"
   fullName: FinTOKMAK.SkillSystem.SkillManager.Get
   nameWithType: SkillManager.Get
+- uid: FinTOKMAK.SkillSystem.SkillManager.GetSkillInfo
+  name: GetSkillInfo()
+  href: api/FinTOKMAK.SkillSystem.SkillManager.html#FinTOKMAK_SkillSystem_SkillManager_GetSkillInfo
+  commentId: M:FinTOKMAK.SkillSystem.SkillManager.GetSkillInfo
+  fullName: FinTOKMAK.SkillSystem.SkillManager.GetSkillInfo()
+  nameWithType: SkillManager.GetSkillInfo()
+- uid: FinTOKMAK.SkillSystem.SkillManager.GetSkillInfo*
+  name: GetSkillInfo
+  href: api/FinTOKMAK.SkillSystem.SkillManager.html#FinTOKMAK_SkillSystem_SkillManager_GetSkillInfo_
+  commentId: Overload:FinTOKMAK.SkillSystem.SkillManager.GetSkillInfo
+  isSpec: "True"
+  fullName: FinTOKMAK.SkillSystem.SkillManager.GetSkillInfo
+  nameWithType: SkillManager.GetSkillInfo
+- uid: FinTOKMAK.SkillSystem.SkillManager.preLoadSkills
+  name: preLoadSkills
+  href: api/FinTOKMAK.SkillSystem.SkillManager.html#FinTOKMAK_SkillSystem_SkillManager_preLoadSkills
+  commentId: F:FinTOKMAK.SkillSystem.SkillManager.preLoadSkills
+  fullName: FinTOKMAK.SkillSystem.SkillManager.preLoadSkills
+  nameWithType: SkillManager.preLoadSkills
 - uid: FinTOKMAK.SkillSystem.SkillManager.Remove(System.String)
   name: Remove(String)
   href: api/FinTOKMAK.SkillSystem.SkillManager.html#FinTOKMAK_SkillSystem_SkillManager_Remove_System_String_
@@ -368,37 +455,91 @@ references:
   isSpec: "True"
   fullName: FinTOKMAK.SkillSystem.SkillManager.Remove
   nameWithType: SkillManager.Remove
-- uid: FinTOKMAK.SkillSystem.SkillManager.skillEvents
-  name: skillEvents
-  href: api/FinTOKMAK.SkillSystem.SkillManager.html#FinTOKMAK_SkillSystem_SkillManager_skillEvents
-  commentId: F:FinTOKMAK.SkillSystem.SkillManager.skillEvents
-  fullName: FinTOKMAK.SkillSystem.SkillManager.skillEvents
-  nameWithType: SkillManager.skillEvents
-- uid: FinTOKMAK.SkillSystem.SkillManager.skillEventsName
-  name: skillEventsName
-  href: api/FinTOKMAK.SkillSystem.SkillManager.html#FinTOKMAK_SkillSystem_SkillManager_skillEventsName
-  commentId: F:FinTOKMAK.SkillSystem.SkillManager.skillEventsName
-  fullName: FinTOKMAK.SkillSystem.SkillManager.skillEventsName
-  nameWithType: SkillManager.skillEventsName
-- uid: FinTOKMAK.SkillSystem.SkillManager.SkillEvnetsInvoke(System.String)
-  name: SkillEvnetsInvoke(String)
-  href: api/FinTOKMAK.SkillSystem.SkillManager.html#FinTOKMAK_SkillSystem_SkillManager_SkillEvnetsInvoke_System_String_
-  commentId: M:FinTOKMAK.SkillSystem.SkillManager.SkillEvnetsInvoke(System.String)
-  fullName: FinTOKMAK.SkillSystem.SkillManager.SkillEvnetsInvoke(System.String)
-  nameWithType: SkillManager.SkillEvnetsInvoke(String)
-- uid: FinTOKMAK.SkillSystem.SkillManager.SkillEvnetsInvoke*
-  name: SkillEvnetsInvoke
-  href: api/FinTOKMAK.SkillSystem.SkillManager.html#FinTOKMAK_SkillSystem_SkillManager_SkillEvnetsInvoke_
-  commentId: Overload:FinTOKMAK.SkillSystem.SkillManager.SkillEvnetsInvoke
+- uid: FinTOKMAK.SkillSystem.SkillManager.SetSkillStatus(System.Collections.Generic.Dictionary{System.String,FinTOKMAK.SkillSystem.SkillManager.SkillStatus})
+  name: SetSkillStatus(Dictionary<String, SkillManager.SkillStatus>)
+  href: api/FinTOKMAK.SkillSystem.SkillManager.html#FinTOKMAK_SkillSystem_SkillManager_SetSkillStatus_System_Collections_Generic_Dictionary_System_String_FinTOKMAK_SkillSystem_SkillManager_SkillStatus__
+  commentId: M:FinTOKMAK.SkillSystem.SkillManager.SetSkillStatus(System.Collections.Generic.Dictionary{System.String,FinTOKMAK.SkillSystem.SkillManager.SkillStatus})
+  name.vb: SetSkillStatus(Dictionary(Of String, SkillManager.SkillStatus))
+  fullName: FinTOKMAK.SkillSystem.SkillManager.SetSkillStatus(System.Collections.Generic.Dictionary<System.String, FinTOKMAK.SkillSystem.SkillManager.SkillStatus>)
+  fullName.vb: FinTOKMAK.SkillSystem.SkillManager.SetSkillStatus(System.Collections.Generic.Dictionary(Of System.String, FinTOKMAK.SkillSystem.SkillManager.SkillStatus))
+  nameWithType: SkillManager.SetSkillStatus(Dictionary<String, SkillManager.SkillStatus>)
+  nameWithType.vb: SkillManager.SetSkillStatus(Dictionary(Of String, SkillManager.SkillStatus))
+- uid: FinTOKMAK.SkillSystem.SkillManager.SetSkillStatus*
+  name: SetSkillStatus
+  href: api/FinTOKMAK.SkillSystem.SkillManager.html#FinTOKMAK_SkillSystem_SkillManager_SetSkillStatus_
+  commentId: Overload:FinTOKMAK.SkillSystem.SkillManager.SetSkillStatus
   isSpec: "True"
-  fullName: FinTOKMAK.SkillSystem.SkillManager.SkillEvnetsInvoke
-  nameWithType: SkillManager.SkillEvnetsInvoke
+  fullName: FinTOKMAK.SkillSystem.SkillManager.SetSkillStatus
+  nameWithType: SkillManager.SetSkillStatus
+- uid: FinTOKMAK.SkillSystem.SkillManager.skillEventHook
+  name: skillEventHook
+  href: api/FinTOKMAK.SkillSystem.SkillManager.html#FinTOKMAK_SkillSystem_SkillManager_skillEventHook
+  commentId: F:FinTOKMAK.SkillSystem.SkillManager.skillEventHook
+  fullName: FinTOKMAK.SkillSystem.SkillManager.skillEventHook
+  nameWithType: SkillManager.skillEventHook
+- uid: FinTOKMAK.SkillSystem.SkillManager.SkillEventsInvoke(System.String)
+  name: SkillEventsInvoke(String)
+  href: api/FinTOKMAK.SkillSystem.SkillManager.html#FinTOKMAK_SkillSystem_SkillManager_SkillEventsInvoke_System_String_
+  commentId: M:FinTOKMAK.SkillSystem.SkillManager.SkillEventsInvoke(System.String)
+  fullName: FinTOKMAK.SkillSystem.SkillManager.SkillEventsInvoke(System.String)
+  nameWithType: SkillManager.SkillEventsInvoke(String)
+- uid: FinTOKMAK.SkillSystem.SkillManager.SkillEventsInvoke*
+  name: SkillEventsInvoke
+  href: api/FinTOKMAK.SkillSystem.SkillManager.html#FinTOKMAK_SkillSystem_SkillManager_SkillEventsInvoke_
+  commentId: Overload:FinTOKMAK.SkillSystem.SkillManager.SkillEventsInvoke
+  isSpec: "True"
+  fullName: FinTOKMAK.SkillSystem.SkillManager.SkillEventsInvoke
+  nameWithType: SkillManager.SkillEventsInvoke
 - uid: FinTOKMAK.SkillSystem.SkillManager.skills
   name: skills
   href: api/FinTOKMAK.SkillSystem.SkillManager.html#FinTOKMAK_SkillSystem_SkillManager_skills
   commentId: F:FinTOKMAK.SkillSystem.SkillManager.skills
   fullName: FinTOKMAK.SkillSystem.SkillManager.skills
   nameWithType: SkillManager.skills
+- uid: FinTOKMAK.SkillSystem.SkillManager.SkillStatus
+  name: SkillManager.SkillStatus
+  href: api/FinTOKMAK.SkillSystem.SkillManager.SkillStatus.html
+  commentId: T:FinTOKMAK.SkillSystem.SkillManager.SkillStatus
+  fullName: FinTOKMAK.SkillSystem.SkillManager.SkillStatus
+  nameWithType: SkillManager.SkillStatus
+- uid: FinTOKMAK.SkillSystem.SkillManager.SkillStatus.cumulateCount
+  name: cumulateCount
+  href: api/FinTOKMAK.SkillSystem.SkillManager.SkillStatus.html#FinTOKMAK_SkillSystem_SkillManager_SkillStatus_cumulateCount
+  commentId: F:FinTOKMAK.SkillSystem.SkillManager.SkillStatus.cumulateCount
+  fullName: FinTOKMAK.SkillSystem.SkillManager.SkillStatus.cumulateCount
+  nameWithType: SkillManager.SkillStatus.cumulateCount
+- uid: FinTOKMAK.SkillSystem.SkillManager.SkillStatus.restCdTime
+  name: restCdTime
+  href: api/FinTOKMAK.SkillSystem.SkillManager.SkillStatus.html#FinTOKMAK_SkillSystem_SkillManager_SkillStatus_restCdTime
+  commentId: F:FinTOKMAK.SkillSystem.SkillManager.SkillStatus.restCdTime
+  fullName: FinTOKMAK.SkillSystem.SkillManager.SkillStatus.restCdTime
+  nameWithType: SkillManager.SkillStatus.restCdTime
+- uid: FinTOKMAK.SkillSystem.SkillManager.SkillStatus.ToString
+  name: ToString()
+  href: api/FinTOKMAK.SkillSystem.SkillManager.SkillStatus.html#FinTOKMAK_SkillSystem_SkillManager_SkillStatus_ToString
+  commentId: M:FinTOKMAK.SkillSystem.SkillManager.SkillStatus.ToString
+  fullName: FinTOKMAK.SkillSystem.SkillManager.SkillStatus.ToString()
+  nameWithType: SkillManager.SkillStatus.ToString()
+- uid: FinTOKMAK.SkillSystem.SkillManager.SkillStatus.ToString*
+  name: ToString
+  href: api/FinTOKMAK.SkillSystem.SkillManager.SkillStatus.html#FinTOKMAK_SkillSystem_SkillManager_SkillStatus_ToString_
+  commentId: Overload:FinTOKMAK.SkillSystem.SkillManager.SkillStatus.ToString
+  isSpec: "True"
+  fullName: FinTOKMAK.SkillSystem.SkillManager.SkillStatus.ToString
+  nameWithType: SkillManager.SkillStatus.ToString
+- uid: FinTOKMAK.SkillSystem.SkillManager.useLocalSkillSystem
+  name: useLocalSkillSystem
+  href: api/FinTOKMAK.SkillSystem.SkillManager.html#FinTOKMAK_SkillSystem_SkillManager_useLocalSkillSystem
+  commentId: P:FinTOKMAK.SkillSystem.SkillManager.useLocalSkillSystem
+  fullName: FinTOKMAK.SkillSystem.SkillManager.useLocalSkillSystem
+  nameWithType: SkillManager.useLocalSkillSystem
+- uid: FinTOKMAK.SkillSystem.SkillManager.useLocalSkillSystem*
+  name: useLocalSkillSystem
+  href: api/FinTOKMAK.SkillSystem.SkillManager.html#FinTOKMAK_SkillSystem_SkillManager_useLocalSkillSystem_
+  commentId: Overload:FinTOKMAK.SkillSystem.SkillManager.useLocalSkillSystem
+  isSpec: "True"
+  fullName: FinTOKMAK.SkillSystem.SkillManager.useLocalSkillSystem
+  nameWithType: SkillManager.useLocalSkillSystem
 - uid: FinTOKMAK.SkillSystem.TriggerType
   name: TriggerType
   href: api/FinTOKMAK.SkillSystem.TriggerType.html
