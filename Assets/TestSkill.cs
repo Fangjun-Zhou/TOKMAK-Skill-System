@@ -1,7 +1,38 @@
-﻿namespace DefaultNamespace
+﻿using FinTOKMAK.SkillSystem;
+using UnityEngine;
+
+namespace DefaultNamespace
 {
-    public class TestSkill : UnityEngine.MonoBehaviour
+    [CreateAssetMenu(fileName = "Test Skill Logic", menuName = "FinTOKMAK/Skill System/Skill Logics/Test",
+        order = 0)]
+    public class TestSkill : SkillLogic
     {
-        
+        public override void OnInitialization(SkillLogicManager manager)
+        {
+            base.OnInitialization(manager);
+            
+            Debug.Log("Initialized.");
+        }
+
+        public override void OnAdd(SkillLogic self)
+        {
+            base.OnAdd(self);
+            
+            Debug.Log("Added.");
+        }
+
+        public override void OnContinue()
+        {
+            base.OnContinue();
+            
+            Debug.Log("Continued.");
+        }
+
+        public override void OnRemove()
+        {
+            base.OnRemove();
+            
+            Debug.Log("Removed.");
+        }
     }
 }
