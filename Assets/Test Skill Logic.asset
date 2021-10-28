@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 299d0b8baf7ed9e40bd38cd6e13cb203, type: 3}
   m_Name: Test Skill Logic
   m_EditorClassIdentifier: 
-  id: 
-  continueTime: 1
-  continueStopTime: 0
+  info: {fileID: 11400000, guid: 3c67ba14b25d1174bbc51be04b3d1392, type: 2}
   effectType: 0
+  continueTime: 1
   continueStopTimeOverlay: 0
   continueDeltaTime: 0.1
+  id: 
+  continueStopTime: 0
   continueDeltaTimeNext: 0
