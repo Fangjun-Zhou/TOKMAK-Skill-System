@@ -35,7 +35,7 @@ doc-job:
     needs: ["unit-test-job","lint-test-job"]
     image: erothejoker/docker-docfx:latest
     script:
-      - ls Assets/Package
+      - ls Assets
       - docfx docfx_project/docfx.json
     artifacts:
       paths:
