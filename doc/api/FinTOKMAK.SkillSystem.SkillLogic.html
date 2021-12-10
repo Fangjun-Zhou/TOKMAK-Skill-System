@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SkillLogic
    ">
-    <meta name="generator" content="docfx 2.58.0.0">
+    <meta name="generator" content="docfx 2.58.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -93,7 +93,13 @@
                             <a href="FinTOKMAK.SkillSystem.SkillEffectType.html" title="SkillEffectType" class="">SkillEffectType</a>
                           </li>
                           <li class="">
+                            <a href="FinTOKMAK.SkillSystem.SkillEventNameConfig.html" title="SkillEventNameConfig" class="">SkillEventNameConfig</a>
+                          </li>
+                          <li class="">
                             <a href="FinTOKMAK.SkillSystem.SkillInfo.html" title="SkillInfo" class="">SkillInfo</a>
+                          </li>
+                          <li class="">
+                            <a href="FinTOKMAK.SkillSystem.SkillInfoEditor.html" title="SkillInfoEditor" class="">SkillInfoEditor</a>
                           </li>
                           <li class="active">
                             <a href="FinTOKMAK.SkillSystem.SkillLogic.html" title="SkillLogic" class="active">SkillLogic</a>
@@ -103,6 +109,9 @@
                           </li>
                           <li class="">
                             <a href="FinTOKMAK.SkillSystem.SkillManager.html" title="SkillManager" class="">SkillManager</a>
+                          </li>
+                          <li class="">
+                            <a href="FinTOKMAK.SkillSystem.SkillManager.SkillStatus.html" title="SkillManager.SkillStatus" class="">SkillManager.SkillStatus</a>
                           </li>
                           <li class="">
                             <a href="FinTOKMAK.SkillSystem.TriggerType.html" title="TriggerType" class="">TriggerType</a>
@@ -136,6 +145,30 @@
   </div>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="FinTOKMAK_SkillSystem_SkillLogic__manager" data-uid="FinTOKMAK.SkillSystem.SkillLogic._manager">_manager</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected SkillLogicManager _manager</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FinTOKMAK.SkillSystem.SkillLogicManager.html">SkillLogicManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="FinTOKMAK_SkillSystem_SkillLogic_continueDeltaTime" data-uid="FinTOKMAK.SkillSystem.SkillLogic.continueDeltaTime">continueDeltaTime</h4>
@@ -316,13 +349,13 @@
   
   
   <a id="FinTOKMAK_SkillSystem_SkillLogic_OnAdd_" data-uid="FinTOKMAK.SkillSystem.SkillLogic.OnAdd*"></a>
-  <h4 id="FinTOKMAK_SkillSystem_SkillLogic_OnAdd_FinTOKMAK_SkillSystem_SkillLogicManager_FinTOKMAK_SkillSystem_SkillLogic_" data-uid="FinTOKMAK.SkillSystem.SkillLogic.OnAdd(FinTOKMAK.SkillSystem.SkillLogicManager,FinTOKMAK.SkillSystem.SkillLogic)">OnAdd(SkillLogicManager, SkillLogic)</h4>
+  <h4 id="FinTOKMAK_SkillSystem_SkillLogic_OnAdd_FinTOKMAK_SkillSystem_SkillLogic_" data-uid="FinTOKMAK.SkillSystem.SkillLogic.OnAdd(FinTOKMAK.SkillSystem.SkillLogic)">OnAdd(SkillLogic)</h4>
   <div class="markdown level1 summary"><p>技能被添加时执行的方法</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void OnAdd(SkillLogicManager targer, SkillLogic self)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual void OnAdd(SkillLogic self)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -334,12 +367,6 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><a class="xref" href="FinTOKMAK.SkillSystem.SkillLogicManager.html">SkillLogicManager</a></td>
-        <td><span class="parametername">targer</span></td>
-        <td><p>添加技能的manager</p>
-</td>
-      </tr>
       <tr>
         <td><a class="xref" href="FinTOKMAK.SkillSystem.SkillLogic.html">SkillLogic</a></td>
         <td><span class="parametername">self</span></td>
@@ -361,6 +388,35 @@
   </div>
   
   
+  <a id="FinTOKMAK_SkillSystem_SkillLogic_OnInitialization_" data-uid="FinTOKMAK.SkillSystem.SkillLogic.OnInitialization*"></a>
+  <h4 id="FinTOKMAK_SkillSystem_SkillLogic_OnInitialization_FinTOKMAK_SkillSystem_SkillLogicManager_" data-uid="FinTOKMAK.SkillSystem.SkillLogic.OnInitialization(FinTOKMAK.SkillSystem.SkillLogicManager)">OnInitialization(SkillLogicManager)</h4>
+  <div class="markdown level1 summary"><p>Call this method to initialize the skill, including getting necessary components</p>
+<param name="manager">The SkillLogicManager to add the skill (in the SkillManager)
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void OnInitialization(SkillLogicManager manager)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FinTOKMAK.SkillSystem.SkillLogicManager.html">SkillLogicManager</a></td>
+        <td><span class="parametername">manager</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="FinTOKMAK_SkillSystem_SkillLogic_OnRemove_" data-uid="FinTOKMAK.SkillSystem.SkillLogic.OnRemove*"></a>
   <h4 id="FinTOKMAK_SkillSystem_SkillLogic_OnRemove" data-uid="FinTOKMAK.SkillSystem.SkillLogic.OnRemove">OnRemove()</h4>
   <div class="markdown level1 summary"><p>技能被移除时执行的方法</p>
@@ -369,6 +425,17 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public virtual void OnRemove()</code></pre>
+  </div>
+  
+  
+  <a id="FinTOKMAK_SkillSystem_SkillLogic_PrepareAction_" data-uid="FinTOKMAK.SkillSystem.SkillLogic.PrepareAction*"></a>
+  <h4 id="FinTOKMAK_SkillSystem_SkillLogic_PrepareAction" data-uid="FinTOKMAK.SkillSystem.SkillLogic.PrepareAction">PrepareAction()</h4>
+  <div class="markdown level1 summary"><p>The logic that should be execute when prepare</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void PrepareAction()</code></pre>
   </div>
 </article>
           </div>
