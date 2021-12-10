@@ -60,7 +60,7 @@ doc-push:
     - apt install git-lfs
   needs: ["doc-job"]
   script:
-    - git remote set-url origin git@fintokmak.com:fintokmak/priority-queue.git # git configuration
+    - git remote set-url origin git@fintokmak.com:Fishball/tokmak-skill-system.git # git configuration
     - git config --global user.email "${CI_EMAIL}" && git config --global user.name "${CI_USERNAME}"
     - 'exists=`git show-ref refs/heads/doc` && if [ -n "$exists" ]; then git branch -D doc; fi'
     - git checkout -b doc
