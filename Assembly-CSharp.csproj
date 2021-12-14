@@ -13,7 +13,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6be6614e-7159-3766-39ee-e717d9df9de7}</ProjectGuid>
+    <ProjectGuid>{915009cc-21ab-1932-c07a-daa2146ce423}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -277,7 +277,7 @@
  <HintPath>D:/Program Files/Unity Editor/2020.3.20f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
- <HintPath>D:/Unity Project/skill-system/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>D:/Program Files/Unity Editor/2020.3.20f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -625,91 +625,91 @@
  <HintPath>D:/Program Files/Unity Editor/2020.3.20f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.CacheServer">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/UnityEditor.CacheServer.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/UnityEditor.CacheServer.dll</HintPath>
  </Reference>
  <Reference Include="NaughtyAttributes.Test">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/NaughtyAttributes.Test.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/NaughtyAttributes.Test.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Addressables">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/Unity.Addressables.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/Unity.Addressables.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Localization">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/Unity.Localization.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/Unity.Localization.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ResourceManager">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/Unity.ResourceManager.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/Unity.ResourceManager.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PlasticSCM.Editor">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityInterfaceSupport">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/UnityInterfaceSupport.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/UnityInterfaceSupport.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="SerializableDict.Editor">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/SerializableDict.Editor.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/SerializableDict.Editor.dll</HintPath>
  </Reference>
  <Reference Include="SerializableDict.Runtime">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/SerializableDict.Runtime.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/SerializableDict.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Localization.Editor">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/Unity.Localization.Editor.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/Unity.Localization.Editor.dll</HintPath>
  </Reference>
  <Reference Include="NaughtyAttributes.Editor">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/NaughtyAttributes.Editor.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/NaughtyAttributes.Editor.dll</HintPath>
  </Reference>
  <Reference Include="FinTOKMAK.TimelineSystem.Runtime">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/FinTOKMAK.TimelineSystem.Runtime.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/FinTOKMAK.TimelineSystem.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="NaughtyAttributes.Core">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/NaughtyAttributes.Core.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/NaughtyAttributes.Core.dll</HintPath>
  </Reference>
  <Reference Include="UnityInterfaceSupport.Editor">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/UnityInterfaceSupport.Editor.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/UnityInterfaceSupport.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ScriptableBuildPipeline">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Addressables.Editor">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/Unity.Addressables.Editor.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/Unity.Addressables.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ScriptableBuildPipeline.Editor">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="FinTOKMAK.SkillSystem.Editor.csproj">
-      <Project>{a6c6bf83-f1c9-eb0e-b95e-01e174a7adfd}</Project>
+      <Project>{87e45e39-dd63-48c8-0a68-162379c2bb73}</Project>
       <Name>FinTOKMAK.SkillSystem.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="FinTOKMAK.SkillSystem.Runtime.csproj">
-      <Project>{ca19ba61-0c65-2408-993c-95c521e7061c}</Project>
+      <Project>{2cf98186-4ffa-dad2-4b09-d51698866b22}</Project>
       <Name>FinTOKMAK.SkillSystem.Runtime</Name>
     </ProjectReference>
   </ItemGroup>

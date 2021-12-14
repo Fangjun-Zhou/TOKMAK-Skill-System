@@ -13,7 +13,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{ca19ba61-0c65-2408-993c-95c521e7061c}</ProjectGuid>
+    <ProjectGuid>{2cf98186-4ffa-dad2-4b09-d51698866b22}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -55,6 +55,7 @@
      <Compile Include="Assets\Package\Runtime\SkillInfo.cs" />
      <Compile Include="Assets\Package\Runtime\SkillEventNameConfig.cs" />
      <Compile Include="Assets\Package\Runtime\Skill.cs" />
+     <Compile Include="Assets\Package\Runtime\IRemoteSkillAgent.cs" />
      <Compile Include="Assets\Package\Runtime\SkillManager.cs" />
      <Compile Include="Assets\Package\Runtime\SkillLogicManager.cs" />
      <None Include="Assets\Package\Runtime\FinTOKMAK.SkillSystem.Runtime.asmdef" />
@@ -290,19 +291,19 @@
  <HintPath>D:/Program Files/Unity Editor/2020.3.20f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Plastic.Newtonsoft.Json">
- <HintPath>D:/Unity Project/skill-system/Library/PackageCache/com.unity.collab-proxy@1.11.2/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/PackageCache/com.unity.collab-proxy@1.11.2/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Plastic.Antlr3.Runtime">
- <HintPath>D:/Unity Project/skill-system/Library/PackageCache/com.unity.collab-proxy@1.11.2/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/PackageCache/com.unity.collab-proxy@1.11.2/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="log4netPlastic">
- <HintPath>D:/Unity Project/skill-system/Library/PackageCache/com.unity.collab-proxy@1.11.2/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/PackageCache/com.unity.collab-proxy@1.11.2/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
- <HintPath>D:/Unity Project/skill-system/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="unityplastic">
- <HintPath>D:/Unity Project/skill-system/Library/PackageCache/com.unity.collab-proxy@1.11.2/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/PackageCache/com.unity.collab-proxy@1.11.2/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>D:/Program Files/Unity Editor/2020.3.20f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -650,19 +651,19 @@
  <HintPath>D:/Program Files/Unity Editor/2020.3.20f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
  <Reference Include="UnityInterfaceSupport">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/UnityInterfaceSupport.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/UnityInterfaceSupport.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Localization">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/Unity.Localization.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/Unity.Localization.dll</HintPath>
  </Reference>
  <Reference Include="NaughtyAttributes.Core">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/NaughtyAttributes.Core.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/NaughtyAttributes.Core.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Unity Project/skill-system/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/Unity Project/TOKMAK-Skill-System/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
